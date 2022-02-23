@@ -1,0 +1,24 @@
+site_name: HCL Digital Experience
+
+theme:
+  name: material
+  logo: assets/dx_logo.png
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    # - navigation.expand
+    - search.highlight
+    - search.share
+    - search.suggest
+  custom_dir: theme_overrides/
+  icon:
+    repo: fontawesome/brands/github
+repo_url: https://rohinimuralidharan.github.io/dx_denovo/site/
+repo_name: rohinimuralidharan/dx_anew
+plugins:
+  - awesome-pages
+  - search
+
