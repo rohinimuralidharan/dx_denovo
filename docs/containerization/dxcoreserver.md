@@ -1,4 +1,4 @@
-# DX Core server \| HCL Digital Experience
+# DX Core server
 
 This topic provides information about restarting the DX Core server and on creating core server configuration report using the DXClient tool. The `dx-core-configuration-reports`command is used to generate the differential reports on various core configurations between two DX server nodes.
 
@@ -191,5 +191,5 @@ The restart-dx-core command is used to restart the DX Core server.
     ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

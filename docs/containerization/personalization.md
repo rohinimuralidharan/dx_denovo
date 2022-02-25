@@ -1,4 +1,4 @@
-# Personalization rules \| HCL Digital Experience
+# Personalization rules
 
 This topic contains the commands that the administrators can use to export and import the personalization \(PZN\) rules from the source server to the target server as specified by the user.
 
@@ -199,5 +199,5 @@ This topic contains the commands that the administrators can use to export and i
     ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

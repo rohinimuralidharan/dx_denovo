@@ -1,4 +1,4 @@
-# Digital Experience applications \| HCL Digital Experience
+# Digital Experience applications
 
 This section provides information about the deployment of DX application artifacts by using the DXClient tool.
 
@@ -139,5 +139,5 @@ The deploy-application command is used to deploy the EAR file into the WebSphere
     ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

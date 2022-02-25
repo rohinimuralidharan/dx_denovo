@@ -1,4 +1,4 @@
-# Hybrid deployment - Operator \| HCL Digital Experience
+# Hybrid deployment - Operator
 
 This section describes how to install HCL Digital Experience 9.5 Portal Server and Web Content Manager services to on-premises platforms, operating with Digital Asset Management, Content Composer, Experience API deployed to cloud-based Kubernetes and OpenShift platforms deployed using the Operator \(dxctl\) method.
 

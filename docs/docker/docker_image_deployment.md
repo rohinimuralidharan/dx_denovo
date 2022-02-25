@@ -1,4 +1,4 @@
-# Docker image deployment \| HCL Digital Experience
+# Docker image deployment
 
 This section describes the steps in deploying HCL Digital Experience 9.5 containers using Docker.
 

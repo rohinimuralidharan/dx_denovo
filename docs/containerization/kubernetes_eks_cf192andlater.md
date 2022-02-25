@@ -1,4 +1,4 @@
-# Deploy DX CF192 and later release Containers to Amazon EKS \| HCL Digital Experience
+# Deploy DX CF192 and later release Containers to Amazon EKS
 
 This section describes how to deploy HCL Digital Experience 9.5 CF192 and later release containers, along with the Ambassador, to Kubernetes as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/).
 
@@ -426,5 +426,5 @@ If some deployment resources \(such as services\) are not deleted, run the follo
 kubectl patch services $(kubectl get services -n $NAMESPACE  | grep -v "NAME" |awk  '{print $1}') -p '{"metadata":{"finalizers":null}}' -n $NAMESPACE
 ```
 
-**Parent topic:**[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/deploy_kubernetes_eks.md)
+**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/deploy_kubernetes_eks.md)
 

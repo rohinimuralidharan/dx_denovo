@@ -1,4 +1,4 @@
-# Portlets \| HCL Digital Experience
+# Portlets
 
 This topic provides information about the deployment and undeployment of portlets.
 
@@ -17,7 +17,7 @@ The `deploy-portlet` command is used to deploy one or more new or updated portle
 
 -   **Portlet Application web archive file**
 
-    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files \| HCL Digital Experience](../admin-system/adxmlref_import_war.md)
+    This web archive .war file should contain the necessary portlet artifacts for deployment, as per the JSR 286 portlet standard. Refer to [Importing WAR files](../admin-system/adxmlref_import_war.md)
 
 
 **Command**
@@ -256,5 +256,5 @@ dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort
 dxclient undeploy-portlet -dxProtocol <dxProtocol> -hostname <host-name> -dxPort <dxPort> -xmlConfigPath <xmlConfigPath> -dxUsername <dxUsername> -dxPassword <dxPassword> -xmlFile <xml-file-with-path> -enableBackup true -dxSoapPort <dxSoapPort> -dxConnectHostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -dxProfileName <Profile name of the DX core server profile>
 ```
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

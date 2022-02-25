@@ -1,4 +1,4 @@
-# Docker image deployment using Docker Compose \| HCL Digital Experience
+# Docker image deployment using Docker Compose
 
 This section presents availability of a new option to deploy HCL Digital Experience 9.5 Docker images for non-production using [Docker Compose](https://docs.docker.com/compose/). This approach streamlines deployment and configuration of HCL DX 9.5 components. For more information about Docker Compose, see the [Docker Compose documentation](https://docs.docker.com/compose/).
 

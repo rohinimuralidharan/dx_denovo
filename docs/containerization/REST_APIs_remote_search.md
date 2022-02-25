@@ -1,4 +1,4 @@
-# Configure Remote Search using REST APIs \| HCL Digital Experience
+# Configure Remote Search using REST APIs
 
 This section shows how to configure Remote Search for your HCL Digital Experience 9.5 environments on a traditional IBM WebSphere Application Server Network Deployment-based cluster DX deployment cluster, a Docker container, or on supported Red Hat OpenShift and Kubernetes container platforms using REST APIs.
 
@@ -318,5 +318,5 @@ On a Virtual Portal, the “!ut/p/digest” portal of the URL must be included a
 
 As such, referring to the example URLs above, the “!ut/p/digest” portal of the URL is NOT included. This implies that this URL is issued in the "main" VP of the DX Portal. A 302 redirect will take place, and the “!ut/p/digest” will be inserted in the final URL. This portion of the URL can also be used for the VP URL request.
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

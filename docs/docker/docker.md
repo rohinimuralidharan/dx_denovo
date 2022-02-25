@@ -1,4 +1,4 @@
-# Docker image list \| HCL Digital Experience
+# Docker image list
 
 This section presents the latest HCL DX 9.5 Docker container update images available.
 

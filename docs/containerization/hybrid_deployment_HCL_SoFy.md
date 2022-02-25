@@ -1,4 +1,4 @@
-# Deploying HCL Digital Experience 9.5 with HCL Solution Factory \(SoFy\) \| HCL Digital Experience
+# Deploying HCL Digital Experience 9.5 with HCL Solution Factory \(SoFy\)
 
 The [HCL Solution Factory \(SoFy\)](https://www.hcltechsw.com/sofy/catalog) platform offers the ability for organizations to quickly prototype, test and deploy HCL Digital Experience and other solutions, and can enable organizations to speed cloud-native adoption.
 

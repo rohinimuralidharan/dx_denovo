@@ -1,6 +1,6 @@
-# Managing Web Content Syndicators and Subscribers using DXClient \| HCL Digital Experience
+# Managing Web Content Syndicators and Subscribers using DXClient
 
-The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers \| HCL Digital Experience](../panel_help/wcm_syndication.md).
+The section provides information about using the DXClient process to automate the management of Web Content Manager Syndicators, Subscribers, and get-syndication reports. For more information on the process and settings of the Web Content Manager Syndicators and Subscribers, see [How to manage syndicators and subscribers](../panel_help/wcm_syndication.md).
 
 ## Managing syndicators
 
@@ -390,5 +390,5 @@ The `create-syndication-relation` command is used to create the syndication rela
     ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

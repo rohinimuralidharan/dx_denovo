@@ -1,4 +1,4 @@
-# Resource environment provider \| HCL Digital Experience
+# Resource environment provider
 
 This topic describes the commands that are used to create, update, delete, and retrieve custom properties from an existing resource environment provider. It also provides the commands to export or import multiple resource environment providers.
 
@@ -266,5 +266,5 @@ This topic describes the commands that are used to create, update, delete, and r
         ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

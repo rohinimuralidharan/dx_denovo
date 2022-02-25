@@ -1,4 +1,4 @@
-# Scaling DX 9.5 container deployments using Helm \| HCL Digital Experience
+# Scaling DX 9.5 container deployments using Helm
 
 This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html) for more information on these services.
 
@@ -27,8 +27,8 @@ Per default, the automated scaling is not active and needs to be enabled before 
 
 -   **Persistence**
 
-    The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture \| HCL Digital Experience](dam_persistence_architecture.md).
+    The Persistence used for Digital Asset Management currently supports scaling only with the updated persistence feature. For more information, see [Digital Asset Management persistence architecture](dam_persistence_architecture.md).
 
 
-**Parent topic:**[Overview of the Helm architecture \| HCL Digital Experience](../containerization/helm_overview.md)
+**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
 

@@ -1,4 +1,4 @@
-# Shared library \| HCL Digital Experience
+# Shared library
 
 Shared libraries are jar files representing code that is shared across multiple components of the customer, for example, portlets, themes, preprocessors, and others.
 
@@ -115,5 +115,5 @@ The shared-library command uses two sub-commands upload and delete to manage fil
     ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

@@ -1,4 +1,4 @@
-# Configuring DX 9.5 deployments to container platforms using Helm \| HCL Digital Experience
+# Configuring DX 9.5 deployments to container platforms using Helm
 
 This topic covers details the configuration structure in the HCL Digital Experience 9.5 OpenShift and Kubernetes deployment with Helm.
 
@@ -37,5 +37,5 @@ For development and testing, sometimes it is useful to directly adjust configura
 |`<RELEASE-NAME>-ring-api`|Ring API|
 |`<RELEASE-NAME>-runtime-controller`|Runtime Controller|
 
-**Parent topic:**[Overview of the Helm architecture \| HCL Digital Experience](../containerization/helm_overview.md)
+**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
 

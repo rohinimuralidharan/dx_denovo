@@ -1,4 +1,4 @@
-# Configure the OpenLDAP container image to the HCL Digital Experience 9.5 Container Deployment
+# Configure the OpenLDAP container image 
 
 Read more about configuring the OpenLDAP container image to the 9.5 container deployment, which is available with HCL Digital Experience 9.5 Container Update release CF181 and later.
 
@@ -45,7 +45,7 @@ To work around this limitation, and configure OpenLDAP to DX with custom values,
 
 Once these steps are completed, the DX container is recreated to run the OpenLDAP configuration task.
 
-For more information on `dxctl`, see the [dxctl \| HCL Digital Experience](dxtools_dxctl.md) topic.
+For more information on `dxctl`, see the [dxctl](dxtools_dxctl.md) topic.
 
 Video: [Using OpenLDAP with HCL DX 9.5 on Red Hat OpenShift](https://www.youtube.com/watch?v=JLAahtJI_Y4)
 
@@ -181,5 +181,5 @@ HCL Digital Experience will periodically provide updated OpenLDAP container imag
 
 Consult the HCL Digital Experience 9.5 [Container deployment](../install/rm_container_deployment.md) page for the latest list of Digital Experience 9.5 container components available with your Digital Experience entitlements from the [HCL Software License Portal](https://www.hcltech.com/software/support/release).
 
-**Parent topic:**[Customizing your container deployment \| HCL Digital Experience](../containerization/customization.md)
+**Parent topic:**[Customizing your container deployment](../containerization/customization.md)
 

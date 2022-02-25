@@ -1,4 +1,4 @@
-# Upgrade options for containerized deployments \| HCL Digital Experience
+# Upgrade options for containerized deployments
 
 HCL Digital Experience on containerized platforms is constantly evolving and incorporating customer feedback. Some of these improvements need extra manual steps to get to the latest version. To make this journey manageable and transparent, this topic shows all possible starting scenarios and their upgrade path.
 

@@ -1,4 +1,4 @@
-# Themes \| HCL Digital Experience
+# Themes
 
 This topic provides information about the deployment and undeployment of themes artifacts.
 
@@ -354,5 +354,5 @@ Users can restore the theme by using the backup files.
 dxclient undeploy-theme -dxProtocol <http/https> -hostname <host-name> -dxPort <dxPort> -dxUsername <dxUsername> -dxPassword <dxPassword> -dxSoapPort <dxSoapPort> -dxConnectHostname <hostname> -dxConnectPort <dxConnectPort> -dxConnectUsername <dxConnectUsername> -dxConnectPassword <dxConnectPassword> -xmlFile <xml-file-with-path> -applicationName <application name> -themeName <theme-name> -enableBackup <enable-backup> -dxProfileName <Profile name of the DX core server profile> 
 ```
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

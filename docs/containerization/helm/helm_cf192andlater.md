@@ -1,4 +1,4 @@
-# Deploying HCL DX CF196 to container platforms using Helm \| HCL Digital Experience
+# Deploying HCL DX CF196 to container platforms using Helm
 
 This topic provides administrators with a high-level overview of the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment capabilities using Helm.
 

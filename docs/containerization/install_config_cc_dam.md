@@ -1,4 +1,4 @@
-# Install the HCL Digital Experience 9.5 components \| HCL Digital Experience
+# Install the HCL Digital Experience 9.5 components
 
 This section provides a high-level overview of the architecture and the steps to install, configure, and update the HCL Digital Experience 9.5 components: Experience API, Content Composer, and Digital Asset Management.
 

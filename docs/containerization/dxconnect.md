@@ -1,4 +1,4 @@
-# DXConnect \| HCL Digital Experience
+# DXConnect
 
 DXConnect is a servlet-based internal application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later releases, under the [Configuration Wizard profile - `cw_profile`](../config/cw_overview.html). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands. This topic covers the DXConnect installation and configuration instructions.
 
@@ -55,5 +55,5 @@ To re-install DXConnect use the command below:
 
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](helm_access_configwizard.md).
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect \| HCL Digital Experience](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 

@@ -1,4 +1,4 @@
-# Update deployment to a later version \| HCL Digital Experience
+# Update deployment to a later version
 
 This section shows how to update your HCL DX 9.5 Container Update CF197 and later deployment to a newer DX 9.5 Container Update release version.
 
@@ -88,12 +88,12 @@ After the action is completed, you can proceed with the DX update procedure. Thi
     -   The `-f path/to/your/custom-values.yaml` parameter must point to the custom-values.yaml you updated.
     -   `path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz` is the HCL Digital Experience 9.5 Container Update Helm Chart that you extracted in the preparation steps.
 
--   **[Running DX Core configuration tasks \| HCL Digital Experience](../containerization/run_core_config_engine.md)**  
+-   **[Running DX Core configuration tasks](../containerization/run_core_config_engine.md)**  
 This topic shows how to run manual Core configuration tasks on your HCL DX 9.5 CF197 and later container deployments.
--   **[Migrate to new DAM DB in Helm-based deployments \| HCL Digital Experience](../containerization/helm_dam_migration_newDB.md)**  
+-   **[Migrate to new DAM DB in Helm-based deployments](../containerization/helm_dam_migration_newDB.md)**  
 This manual migration process to the new DAM DB is mandatory if you have DX CF196 or CF197 deployed using the Helm-based deployment option and are now upgrading to CF200. It is mandatory because you cannot upgrade to a future release, such as CF201, without manually migrating to the new DB. If you already have CF 198 or CF199 installed using the Helm-based deployment option, then you need not manually migrate the DAM DB.
 -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_helm.md)**  
 This section shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version.
 
-**Parent topic:**[Deploying container platforms using Helm \| HCL Digital Experience](../containerization/helm_deployment.md)
+**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
 

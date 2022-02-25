@@ -1,4 +1,4 @@
-# Monitor the Digital Experience deployment using metrics \| HCL Digital Experience
+# Monitor the Digital Experience deployment using metrics
 
 This topic outlines the use of standards-based metrics to monitor activity and performance of DX container deployments.
 
@@ -116,5 +116,5 @@ To leverage the full potential of the [Digital Experience 9.5 applications](depl
 
 -   [`prometheus`](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus) and [`grafana`](https://github.com/grafana/helm-charts) are provided as independent Helm charts.
 
-**Parent topic:**[Troubleshooting your Helm deployment \| HCL Digital Experience](../containerization/helm_troubleshooting.md)
+**Parent topic:**[Troubleshooting your Helm deployment](../containerization/helm_troubleshooting.md)
 

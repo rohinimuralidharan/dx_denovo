@@ -1,4 +1,4 @@
-# Exporting and importing WCM libraries \| HCL Digital Experience
+# Exporting and importing WCM libraries
 
 This section provides information about how to export and import WCM libraries using DXClient.
 
@@ -184,5 +184,5 @@ The `wcm-library-import` command is used to import the WCM libraries from the so
     ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

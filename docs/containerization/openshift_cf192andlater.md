@@ -1,4 +1,4 @@
-# Deploying DX CF192 and later release Containers to Red Hat OpenShift \| HCL Digital Experience
+# Deploying DX CF192 and later release Containers to Red Hat OpenShift
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 DX CF192 and later release Containers using the Red Hat OpenShift platform.
 
@@ -259,5 +259,5 @@ To delete the deployment, follow one of two methods:
     ```
 
 
-**Parent topic:**[Deploying DX Container to Red Hat OpenShift \| HCL Digital Experience](../containerization/deploy_openshift.md)
+**Parent topic:**[Deploying DX Container to Red Hat OpenShift](../containerization/deploy_openshift.md)
 

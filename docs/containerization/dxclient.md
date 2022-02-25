@@ -1,4 +1,4 @@
-# DXClient \| HCL Digital Experience
+# DXClient
 
 DXClient is a tool that helps developers and administrators manage tasks, such as uploading one or more portlets or Script Applications, from source development environments to target HCL DX 9.5 deployments. This tool is capable of taking artifacts developed locally and deploying them to DX 9.5 servers deployed to supported on-premises platforms in standalone, cluster, or farm-topologies and supported Kubernetes platforms.
 
@@ -509,5 +509,5 @@ dxclient help [command]
 
 You can access the ConfigWizard admin console in a container environment from your local system. For more information, refer to [Accessing the ConfigWizard admin console in a container environment](helm_access_configwizard.md).
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect \| HCL Digital Experience](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 

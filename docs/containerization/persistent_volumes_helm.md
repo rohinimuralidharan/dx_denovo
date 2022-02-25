@@ -1,4 +1,4 @@
-# PersistentVolumes and related operations considerations \| HCL Digital Experience
+# PersistentVolumes and related operations considerations
 
 This topic provides details covering the PersistentVolumes \(PVs\) and related operations considerations in storing data for DX 9.5 stateful applications.
 
@@ -54,5 +54,5 @@ Remote Search is limited to only one Pod, therefore, requires one PV for that Po
 
 Refer to **[Networking configuration](helm_configure_networking.md)** for next steps.
 
-**Parent topic:**[Overview of the Helm architecture \| HCL Digital Experience](../containerization/helm_overview.md)
+**Parent topic:**[Overview of the Helm architecture](../containerization/helm_overview.md)
 

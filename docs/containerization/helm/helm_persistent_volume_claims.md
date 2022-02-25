@@ -1,4 +1,4 @@
-# Configure PersistentVolumeClaims \(PVCs\) \| HCL Digital Experience
+# Configure PersistentVolumeClaims \(PVCs\)
 
 To run HCL Digital Experience 9.5 Container deployments in your Kubernetes or OpenShift cluster, you need to set up PersistentVolumes \(PVs\) on your cluster and configure the Helm Chart to create the appropriate PersistentVolumeClaims \(PVCs\).
 
@@ -283,5 +283,5 @@ Refer to **[Networking configuration](helm_configure_networking.md)** for the ne
 
 ****
 
-**Parent topic:**[Deploying container platforms using Helm \| HCL Digital Experience](../containerization/helm_deployment.md)
+**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
 

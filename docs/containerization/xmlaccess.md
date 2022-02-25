@@ -1,4 +1,4 @@
-# XML Access \| HCL Digital Experience
+# XML Access
 
 This topic provides information about the xmlaccess command that is used to export or import portlet configurations.
 
@@ -78,5 +78,5 @@ Log files from command execution can be found in the logs directory of the DXCli
 dxclient xmlaccess -xmlFile <xml-file-with-path>
 ```
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

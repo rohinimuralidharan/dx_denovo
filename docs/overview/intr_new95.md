@@ -53,7 +53,7 @@ HCL Digital Experience customers and business partners may provide feedback on t
 If you are migrating from an earlier release of HCL Digital Experience, you should be aware of various features and themes that are unsupported per each release.
 -   **[Deprecated features for HCL Digital Experience 9.5](../reference/deprecated_features.md)**  
 If you are migrating from an earlier release of HCL Digital Experience, you should be aware of various features and themes that are deprecated per each release. 
--   **[List of software fixes \| HCL Digital Experience 9.5](../overview/soft_fixes95.md)**  
+-   **[List of software fixes 9.5](../overview/soft_fixes95.md)**  
 This includes new features and improvements for the latest version of HCL Digital Experience.
 -   **[Fixes for IBM WebSphere Application Server 9.0.5](../overview/was_905.md)**  
 Learn about the latest fixes for IBM WebSphere Application Server 9.0.5.

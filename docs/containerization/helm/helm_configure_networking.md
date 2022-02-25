@@ -1,4 +1,4 @@
-# Configure networking \| HCL Digital Experience
+# Configure networking
 
 This section explains what must be configured from a networking perspective to get HCL Digital Experience 9.5 running in your Kubernetes or OpenShift cluster, and to provide accessibility to your deployment from outside the Cluster.
 
@@ -150,5 +150,5 @@ networking:
 
 Refer to **[Additional tasks](helm_additional_tasks.md)** for the next steps.
 
-**Parent topic:**[Deploying container platforms using Helm \| HCL Digital Experience](../containerization/helm_deployment.md)
+**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
 

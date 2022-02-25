@@ -1,4 +1,4 @@
-# Migrate to new DAM DB in Helm-based deployments \| HCL Digital Experience
+# Migrate to new DAM DB in Helm-based deployments
 
 This manual migration process to the new DAM DB is mandatory if you have DX CF196 or CF197 deployed using the Helm-based deployment option and are now upgrading to CF200. It is mandatory because you cannot upgrade to a future release, such as CF201, without manually migrating to the new DB. If you already have CF 198 or CF199 installed using the Helm-based deployment option, then you need not manually migrate the DAM DB.
 
@@ -190,5 +190,5 @@ Once the restore procedure is completed, you can disable the DAM DB migration mo
 
 You might have to wait for a few minutes until all the persistence pods and DAM pods are back to the running state.
 
-**Parent topic:**[Update deployment to a later version \| HCL Digital Experience](../containerization/helm_update_deployment.md)
+**Parent topic:**[Update deployment to a later version](../containerization/helm_update_deployment.md)
 

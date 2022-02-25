@@ -1,11 +1,11 @@
-# Sample Pipelines for use with HCL DXClient and Automation servers \| HCL Digital Experience
+# Sample Pipelines for use with HCL DXClient and Automation servers
 
 A CI/CD pipeline can help automate processes in the development and test cycle, including deploying code to test and production environments. HCL DX 9.5 provides sample pipelines for use with the DXClient tooling to demonstrate how the deployment of portlets, Script Applications, Themes, DX Application, export and import of WCM libraries, etc., can be automated.
 
 **Note:** The sample pipelines referred in this topic are supported only until the HCL Digital Experience Container update version CF195. We recommend that you refer to the following sample pipelines for releases CF196 and later.
 
--   [Sample Pipelines for the DXClient Docker image file \| HCL Digital Experience](sample_pipelines_docker_dxclient.md)
--   [Sample Pipelines for the DXClient node package file \| HCL Digital Experience](sample_pipelines_node_dxclient.md)
+-   [Sample Pipelines for the DXClient Docker image file](sample_pipelines_docker_dxclient.md)
+-   [Sample Pipelines for the DXClient node package file](sample_pipelines_node_dxclient.md)
 
 ## Sample Pipeline details
 
@@ -167,5 +167,5 @@ This sample shows how to install the DXClient tool in a pipeline and then deploy
 
 ![Pipeline DXClient deploy script application sample](../assets/pipeline_deploy_theme_sample.png)
 
-**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect \| HCL Digital Experience](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
+**Parent topic:**[Deploy DX components using HCL DXClient and DXConnect](../containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md)
 

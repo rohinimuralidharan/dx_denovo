@@ -1,4 +1,4 @@
-# Update Helm deployment configuration \| HCL Digital Experience
+# Update Helm deployment configuration
 
 This section describes how to update the configuration of an HCL Digital Experience 9.5 CF196 or later deployment to Kubernetes or OpenShift installed using Helm.
 

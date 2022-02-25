@@ -1,4 +1,4 @@
-# dxctl \| HCL Digital Experience
+# dxctl
 
 Learn how to use `dxctl` for custom HCL Digital Experience 9.5 container deployments
 

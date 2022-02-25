@@ -1,4 +1,4 @@
-# Customizing the HCL DX URL for hybrid deployment \| HCL Digital Experience
+# Customizing the HCL DX URL for hybrid deployment
 
 HCL Digital Experience and Web Services for Remote Portlets are installed with a default URI or context root. This section describes how to change default URI or context root of the portal and hybrid deployment.
 

@@ -1,4 +1,4 @@
-# Additional Helm tasks \| HCL Digital Experience
+# Additional Helm tasks
 
 This topic shows you how to leverage `NodeSelectors` to allow deploying specific DX 9.5 application Pods only on a specific node.
 
@@ -723,5 +723,5 @@ images:
 
 All pods created now have that secret configured for pulling DX container images.
 
-**Parent topic:**[Deploying container platforms using Helm \| HCL Digital Experience](../containerization/helm_deployment.md)
+**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
 

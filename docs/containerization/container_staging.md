@@ -1,4 +1,4 @@
-# Container Staging \| HCL Digital Experience
+# Container Staging
 
 This section describes how to move from an existing HCL Portal environment to a containerized Digital Experience environment.
 
@@ -203,5 +203,5 @@ Follow these steps to syndicate the source and target environments.
     You do not need to disable Practitioner Studio to do this syndication.
 
 
-**Parent topic:**[Digital Experience Application deployment \| HCL Digital Experience](../containerization/ci_cd.md)
+**Parent topic:**[Digital Experience Application deployment](../containerization/ci_cd.md)
 

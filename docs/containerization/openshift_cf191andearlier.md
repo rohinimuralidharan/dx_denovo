@@ -1,4 +1,4 @@
-# Deploying DX CF191 and earlier release Containers to Red Hat OpenShift \| HCL Digital Experience
+# Deploying DX CF191 and earlier release Containers to Red Hat OpenShift
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF191 and earlier release Containers using the Red Hat OpenShift platform.
 
@@ -196,5 +196,5 @@ Removing the entire deployment requires several steps, this is by design.
     -   Ensure you get the `'persistentvolume/your_namespace edited'` message.
     -   You may need to manually remove any data remaining from the previous deployment.
 
-**Parent topic:**[Deploying DX Container to Red Hat OpenShift \| HCL Digital Experience](../containerization/deploy_openshift.md)
+**Parent topic:**[Deploying DX Container to Red Hat OpenShift](../containerization/deploy_openshift.md)
 

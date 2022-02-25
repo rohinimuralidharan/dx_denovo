@@ -1,4 +1,4 @@
-# DAM schemas \| HCL Digital Experience
+# DAM schemas
 
 This topic contains the commands that administrators can use to get a list of all DAM schemas or delete inactive [Digital Asset Management](../digital_asset_mgmt/digital_asset_mgmt_overview.md) \(DAM\) schemas from persistence.
 
@@ -178,5 +178,5 @@ Use the delete-dam-schema command to delete the inactive DAM schema.
     ```
 
 
-**Parent topic:**[DAM artifacts \| HCL Digital Experience](../containerization/dam_artifacts.md)
+**Parent topic:**[DAM artifacts](../containerization/dam_artifacts.md)
 

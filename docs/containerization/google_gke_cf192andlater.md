@@ -157,7 +157,7 @@ docker load -i hcl-dx-redis-image-xxx.tar.gz
 
         ![](../images/dxctl-folder-structure.png "Sample dxctl folder structure")
 
-    For more information on dxctl tool, see [dxctl \| HCL Digital Experience](dxtools_dxctl.md)
+    For more information on dxctl tool, see [dxctl](dxtools_dxctl.md)
 
 6.  Configuring the dxctl properties for the DX 95 CF192 or later deployment
     -   Copy one of the provided properties files to further modify your deployment.

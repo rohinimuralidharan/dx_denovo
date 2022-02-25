@@ -1,4 +1,4 @@
-# Create or update credential vault slot \| HCL Digital Experience
+# Create or update credential vault slot
 
 This topic describes the commands that are used to create or update credential vault slot in the DX server.
 
@@ -101,5 +101,5 @@ This topic describes the commands that are used to create or update credential v
     ```
 
 
-**Parent topic:**[DXClient Artifact Types \| HCL Digital Experience](../containerization/dxclientartifacts.md)
+**Parent topic:**[DXClient Artifact Types](../containerization/dxclientartifacts.md)
 

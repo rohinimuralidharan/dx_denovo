@@ -1,4 +1,4 @@
-# Deploy DX CF191 and earlier release Containers to Amazon EKS \| HCL Digital Experience
+# Deploy DX CF191 and earlier release Containers to Amazon EKS
 
 This section describes how to deploy HCL Digital Experience 9.5 CF191 and earlier release containers, along with the Ambassador, to Kubernetes as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/).
 
@@ -243,5 +243,5 @@ External IP from **Load balancer** in the below example can be used to access PO
     ![](../images/container_eks_portal_example.png "Portal example")
 
 
-**Parent topic:**[Deploy DX Container to Amazon EKS \| HCL Digital Experience](../containerization/deploy_kubernetes_eks.md)
+**Parent topic:**[Deploy DX Container to Amazon EKS](../containerization/deploy_kubernetes_eks.md)
 
