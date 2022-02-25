@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
     
     
       
-        <title>PersistentVolumes and related operations considerations - HCL Digital Experience</title>
+        <title>Configure PersistentVolumeClaims (PVCs) - HCL Digital Experience</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e8d9bf0c.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -35,7 +35,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#persistentvolumes-and-related-operations-considerations" class="md-skip">
+        <a href="#configure-persistentvolumeclaims-pvcs" class="md-skip">
           Skip to content
         </a>
       
@@ -73,9 +73,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="HCL Digital Experience" class="md-header__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
+    <a href="../../../.." title="HCL Digital Experience" class="md-header__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
       
-  <img src="../../assets/dx_logo.png" alt="logo">
+  <img src="../../../../assets/dx_logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PersistentVolumes and related operations considerations
+              Configure PersistentVolumeClaims (PVCs)
             
           </span>
         </div>
@@ -172,7 +172,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
+    <a href="../../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -187,7 +187,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../overview/intr_new95/" class="md-tabs__link">
+      <a href="../../../../overview/intr_new95/" class="md-tabs__link">
         Overview
       </a>
     </li>
@@ -203,24 +203,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../whatsnew/container_update_releases/" class="md-tabs__link">
+      <a href="../../../../whatsnew/container_update_releases/" class="md-tabs__link">
         What's new?
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../docker/docker_overview/" class="md-tabs__link">
-        DX on Docker
       </a>
     </li>
   
@@ -237,7 +221,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../deployment/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../deployment/" class="md-tabs__link md-tabs__link--active">
         DX on Containers
       </a>
     </li>
@@ -250,7 +234,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../dxtraditional" class="md-tabs__link">
+    <a href="../../../../dxtraditional" class="md-tabs__link">
       DX Traditional
     </a>
   </li>
@@ -262,8 +246,8 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../corecapabilities" class="md-tabs__link">
-      Core capabilities
+    <a href="../../../../corecapabilities" class="md-tabs__link">
+      Working with DX
     </a>
   </li>
 
@@ -282,7 +266,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-tabs__link">
+      <a href="../../../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-tabs__link">
         Latest features
       </a>
     </li>
@@ -312,9 +296,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="HCL Digital Experience" class="md-nav__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
+    <a href="../../../.." title="HCL Digital Experience" class="md-nav__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
       
-  <img src="../../assets/dx_logo.png" alt="logo">
+  <img src="../../../../assets/dx_logo.png" alt="logo">
 
     </a>
     HCL Digital Experience
@@ -342,7 +326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -389,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/intr_new95/" class="md-nav__link">
+      <a href="../../../../overview/intr_new95/" class="md-nav__link">
         What's new in HCL Digital Experience 9.5?
       </a>
     </li>
@@ -403,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/intr_ovr/" class="md-nav__link">
+      <a href="../../../../overview/intr_ovr/" class="md-nav__link">
         Product capabilities
       </a>
     </li>
@@ -461,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/container_update_releases/" class="md-nav__link">
+      <a href="../../../../whatsnew/container_update_releases/" class="md-nav__link">
         Cumulative Fixes for DX Containers
       </a>
     </li>
@@ -527,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf201/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf201/" class="md-nav__link">
         What's new in Container Update CF201?
       </a>
     </li>
@@ -541,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf200/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf200/" class="md-nav__link">
         What's new in Container Update CF200?
       </a>
     </li>
@@ -555,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf199/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf199/" class="md-nav__link">
         What's new in Container Update CF199?
       </a>
     </li>
@@ -569,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf198/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf198/" class="md-nav__link">
         What's new in Container Update CF198?
       </a>
     </li>
@@ -583,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf197/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf197/" class="md-nav__link">
         What's new in Container Update CF197?
       </a>
     </li>
@@ -597,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf196/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf196/" class="md-nav__link">
         What's new in Container Update CF196?
       </a>
     </li>
@@ -611,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf195/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf195/" class="md-nav__link">
         What's new in Container Update CF195?
       </a>
     </li>
@@ -625,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf194/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf194/" class="md-nav__link">
         What's new in Container Update CF194?
       </a>
     </li>
@@ -639,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf193/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf193/" class="md-nav__link">
         What's new in Container Update CF193?
       </a>
     </li>
@@ -653,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf192/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf192/" class="md-nav__link">
         What's new in Container Update CF192?
       </a>
     </li>
@@ -667,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf191/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf191/" class="md-nav__link">
         What's new in Container Update CF191?
       </a>
     </li>
@@ -681,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf19/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf19/" class="md-nav__link">
         What's new in Container Update CF19?
       </a>
     </li>
@@ -740,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf184/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf184/" class="md-nav__link">
         What's new in Container Update CF184?
       </a>
     </li>
@@ -754,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf183/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf183/" class="md-nav__link">
         What's new in Container Update CF183?
       </a>
     </li>
@@ -768,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/newcf182/" class="md-nav__link">
+      <a href="../../../../whatsnew/newcf182/" class="md-nav__link">
         What's new in Container Update CF182?
       </a>
     </li>
@@ -782,7 +766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/new_cf181/" class="md-nav__link">
+      <a href="../../../../whatsnew/new_cf181/" class="md-nav__link">
         What's new in Container Update CF181?
       </a>
     </li>
@@ -796,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/new_cf18/" class="md-nav__link">
+      <a href="../../../../whatsnew/new_cf18/" class="md-nav__link">
         What's new in CF18?
       </a>
     </li>
@@ -853,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/new_cf173/" class="md-nav__link">
+      <a href="../../../../whatsnew/new_cf173/" class="md-nav__link">
         What's new in Container Update CF173?
       </a>
     </li>
@@ -867,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/new_cf172/" class="md-nav__link">
+      <a href="../../../../whatsnew/new_cf172/" class="md-nav__link">
         What's new in Container Update CF172?
       </a>
     </li>
@@ -881,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/new_cf171/" class="md-nav__link">
+      <a href="../../../../whatsnew/new_cf171/" class="md-nav__link">
         What's new in Container Update CF171?
       </a>
     </li>
@@ -895,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../whatsnew/new_cf17/" class="md-nav__link">
+      <a href="../../../../whatsnew/new_cf17/" class="md-nav__link">
         What's new in CF17? 9.5
       </a>
     </li>
@@ -922,15 +906,19 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
+        
+          
         
           
         
@@ -943,116 +931,12 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          DX on Docker
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="DX on Docker" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          DX on Docker
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../docker/docker_overview/" class="md-nav__link">
-        Digital Experience on Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../docker/docker/" class="md-nav__link">
-        Docker image list
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../docker/docker_image_deployment/" class="md-nav__link">
-        Docker image deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../docker/docker_compose/" class="md-nav__link">
-        Docker image deployment using Docker Compose
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5">
           DX on Containers
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="DX on Containers" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           DX on Containers
         </label>
@@ -1064,7 +948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../deployment/" class="md-nav__link">
+      <a href="../../../deployment/" class="md-nav__link">
         Digital Experience on containerized platforms
       </a>
     </li>
@@ -1078,8 +962,390 @@
   
   
     <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
+      <a href="../../../overview/" class="md-nav__link">
         Containerization overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../c_kubesupportstatement/" class="md-nav__link">
+        Container platform support matrix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Docker images
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docker images" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Docker images
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker_overview/" class="md-nav__link">
+        Digital Experience on Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker/" class="md-nav__link">
+        Docker image list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker_image_deployment/" class="md-nav__link">
+        Docker image deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../docker/docker_compose/" class="md-nav__link">
+        Docker image deployment using Docker Compose
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Deploying using Helm charts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deploying using Helm charts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Deploying using Helm charts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helm/" class="md-nav__link">
+        Helm-based deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_2">
+          DX Helm architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DX Helm architecture" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          DX Helm architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helm_overview/" class="md-nav__link">
+        Overview of the Helm architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core_interactions_kubernetes/" class="md-nav__link">
+        DX 9.5 Core Interactions with Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy_applications_using_helm/" class="md-nav__link">
+        Deploying DX 9.5 applications to container platforms using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../persistent_volumes_helm/" class="md-nav__link">
+        PersistentVolumes and related operations considerations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configure_deployment_helm/" class="md-nav__link">
+        Configuring DX 9.5 deployments to container platforms using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container_scaling_helm/" class="md-nav__link">
+        Scaling DX 9.5 container deployments using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dam_persistence_architecture/" class="md-nav__link">
+        Digital Asset Management persistence architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helm_deployment/" class="md-nav__link">
+        Deploying on containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_4" type="checkbox" id="__nav_4_5_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_4">
+          Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Planning" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
+        Docker image list
       </a>
     </li>
   
@@ -1106,8 +1372,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../c_kubesupportstatement/" class="md-nav__link">
-        Container platform support matrix
+      <a href="../helm_planning_deployment/" class="md-nav__link">
+        Planning your container deployment using Helm
       </a>
     </li>
   
@@ -1116,89 +1382,75 @@
           
             
               
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configure PersistentVolumeClaims (PVCs)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configure PersistentVolumeClaims (PVCs)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5_5">
-          Helm
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Helm" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
-          <span class="md-nav__icon md-icon"></span>
-          Helm
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#persistent-volume-types" class="md-nav__link">
+    Persistent Volume Types
+  </a>
   
-    <li class="md-nav__item">
-      <a href="../helm/configure_deployment_helm/" class="md-nav__link">
-        Configuring DX 9.5 deployments to container platforms using Helm
-      </a>
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-parameters" class="md-nav__link">
+    Configuration parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-pvc-configurations" class="md-nav__link">
+    Sample PVC configurations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-persistent-volume-definitions" class="md-nav__link">
+    Sample Persistent Volume definitions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1210,91 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../helm/container_scaling_helm/" class="md-nav__link">
-        Scaling DX 9.5 container deployments using Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm/" class="md-nav__link">
-        Helm-based deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_access_configwizard/" class="md-nav__link">
-        Accessing the ConfigWizard admin console in a container environment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_additional_tasks/" class="md-nav__link">
-        Additional Helm tasks
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_backup_and_recovery_procedures/" class="md-nav__link">
-        Backup and recovery procedures for Helm Containerization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_cf192andlater/" class="md-nav__link">
-        Deploying HCL DX CF196 to container platforms using Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_configure_networking/" class="md-nav__link">
+      <a href="../helm_configure_networking/" class="md-nav__link">
         Configure networking
       </a>
     </li>
@@ -1308,219 +1476,16 @@
   
   
     <li class="md-nav__item">
-      <a href="../helm/helm_dam_migration/" class="md-nav__link">
-        Migrate Digital Asset Management persistence and binaries
+      <a href="../helm_additional_tasks/" class="md-nav__link">
+        Additional Helm tasks
       </a>
     </li>
   
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_dam_migration_newDB/" class="md-nav__link">
-        Migrate to new DAM DB in Helm-based deployments
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_deployment/" class="md-nav__link">
-        Deploying container platforms using Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_extract_operator_properties/" class="md-nav__link">
-        Prepare the Operator properties for migration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_fallback_migration_Operator_deployment/" class="md-nav__link">
-        Migrate to restore Core and DAM Operator deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_install_commands/" class="md-nav__link">
-        Install and uninstall commands for HCL DX 9.5 CF196 and later container deployments to Kubernetes and Red Hat OpenShift platforms using Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_operations/" class="md-nav__link">
-        Operations using Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_operator_core_migration/" class="md-nav__link">
-        Migrate the Core profile
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_operator_migration/" class="md-nav__link">
-        Migrating from Operator to Helm deployments
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_overview/" class="md-nav__link">
-        Overview of the Helm architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_persistent_volume_claims/" class="md-nav__link">
-        Configure PersistentVolumeClaims \(PVCs\)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_planning_deployment/" class="md-nav__link">
-        Planning your container deployment using Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_troubleshooting/" class="md-nav__link">
-        Troubleshooting your Helm deployment
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/helm_update_deployment/" class="md-nav__link">
-        Update deployment to a later version
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/hybrid_deployment_helm/" class="md-nav__link">
-        Hybrid Deployment - Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../helm/monitor_helm_deployment_metrics/" class="md-nav__link">
-        Monitor the Digital Experience deployment using metrics
-      </a>
+        </ul>
+      </nav>
     </li>
   
 
@@ -1547,7 +1512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dxtraditional" class="md-nav__link">
+      <a href="../../../../dxtraditional" class="md-nav__link">
         DX Traditional
       </a>
     </li>
@@ -1562,8 +1527,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../corecapabilities" class="md-nav__link">
-        Core capabilities
+      <a href="../../../../corecapabilities" class="md-nav__link">
+        Working with DX
       </a>
     </li>
   
@@ -1580,7 +1545,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       
       
@@ -1593,13 +1558,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_7">
           Latest features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Latest features" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Latest features
         </label>
@@ -1614,7 +1579,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_1" type="checkbox" id="__nav_8_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
       
       
       
@@ -1633,13 +1598,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_8_1">
+        <label class="md-nav__link" for="__nav_7_1">
           Digital asset mgmt
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Digital asset mgmt" data-md-level="2">
-        <label class="md-nav__title" for="__nav_8_1">
+        <label class="md-nav__title" for="__nav_7_1">
           <span class="md-nav__icon md-icon"></span>
           Digital asset mgmt
         </label>
@@ -1651,7 +1616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-nav__link">
         Restore Digital Asset Management image to previous version
       </a>
     </li>
@@ -1665,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_operator/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/digital_asset_mgmt/dam_restore_image_operator/" class="md-nav__link">
         Restore Digital Asset Management image to previous version
       </a>
     </li>
@@ -1679,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/digital_asset_mgmt/digital_asset_mgmt_overview/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/digital_asset_mgmt/digital_asset_mgmt_overview/" class="md-nav__link">
         HCL Digital Asset Management
       </a>
     </li>
@@ -1693,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/digital_asset_mgmt/helm_dam_backup_restore_image/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/digital_asset_mgmt/helm_dam_backup_restore_image/" class="md-nav__link">
         Back up and restore a DAM image
       </a>
     </li>
@@ -1707,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/digital_asset_mgmt/manage_collections/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/digital_asset_mgmt/manage_collections/" class="md-nav__link">
         Manage collections
       </a>
     </li>
@@ -1721,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/digital_asset_mgmt/operator_dam_backup_restore_image/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/digital_asset_mgmt/operator_dam_backup_restore_image/" class="md-nav__link">
         Back up and restore a DAM image
       </a>
     </li>
@@ -1745,7 +1710,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_2" type="checkbox" id="__nav_8_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
       
       
       
@@ -1758,13 +1723,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_8_2">
+        <label class="md-nav__link" for="__nav_7_2">
           Practitioner studio
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Practitioner studio" data-md-level="2">
-        <label class="md-nav__title" for="__nav_8_2">
+        <label class="md-nav__title" for="__nav_7_2">
           <span class="md-nav__icon md-icon"></span>
           Practitioner studio
         </label>
@@ -1776,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/practitioner_studio/enable_prac_studio/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/practitioner_studio/enable_prac_studio/" class="md-nav__link">
         How to enable Practitioner Studio
       </a>
     </li>
@@ -1790,7 +1755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/practitioner_studio/practitionerstudio_overview/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/practitioner_studio/practitionerstudio_overview/" class="md-nav__link">
         Practitioner Studio
       </a>
     </li>
@@ -1804,7 +1769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/practitioner_studio/working_prac_studio/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/practitioner_studio/working_prac_studio/" class="md-nav__link">
         Working with Practitioner Studio
       </a>
     </li>
@@ -1828,7 +1793,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8_3" type="checkbox" id="__nav_8_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
       
       
       
@@ -1837,13 +1802,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_8_3">
+        <label class="md-nav__link" for="__nav_7_3">
           Woodburn studio
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Woodburn studio" data-md-level="2">
-        <label class="md-nav__title" for="__nav_8_3">
+        <label class="md-nav__title" for="__nav_7_3">
           <span class="md-nav__icon md-icon"></span>
           Woodburn studio
         </label>
@@ -1855,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../allnewfeatures/woodburn_studio/woodburn_studio/" class="md-nav__link">
+      <a href="../../../../allnewfeatures/woodburn_studio/woodburn_studio/" class="md-nav__link">
         The Woodburn Studio demo site
       </a>
     </li>
@@ -1903,29 +1868,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#core" class="md-nav__link">
-    Core
+  <a href="#persistent-volume-types" class="md-nav__link">
+    Persistent Volume Types
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#digital-asset-management" class="md-nav__link">
-    Digital Asset Management
+  <a href="#configuration-parameters" class="md-nav__link">
+    Configuration parameters
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#persistence" class="md-nav__link">
-    Persistence
+  <a href="#sample-pvc-configurations" class="md-nav__link">
+    Sample PVC configurations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#remote-search" class="md-nav__link">
-    Remote Search
+  <a href="#sample-persistent-volume-definitions" class="md-nav__link">
+    Sample Persistent Volume definitions
   </a>
   
 </li>
@@ -1944,39 +1909,239 @@
                 
 
 
-<h1 id="persistentvolumes-and-related-operations-considerations">PersistentVolumes and related operations considerations</h1>
-<p>This topic provides details covering the PersistentVolumes (PVs) and related operations considerations in storing data for DX 9.5 stateful applications.</p>
-<p>Digital Experience 9.5 container-based stateful applications (DX 9.5 Core, Digital Asset Management, and Persistence) require PersistentVolumes (PVs) to store their data. Refer to the <a href="../deploy_applications_using_helm/">Deploy DX 9.5 applications to container platforms using Helm</a> topic for a description of the DX 9.5 Applications details.</p>
-<p>As Kubernetes and OpenShift Pods do not have their own persistent file storage, the use of PVs is a must. For more information on PVs, consult the <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/">Kubernetes documentation</a>.</p>
-<p><strong>Note:</strong> You need to consider the type of PVs before you perform an installation. The type of volumes used depends on the type of deployment you are performing. If you are using only <code>ReadWriteOnce</code> (RWO) persistent volumes for all applications, you will not be able to scale them up to multiple Pods.</p>
-<h2 id="core">Core</h2>
-<p>The DX 9.5 Core application requires multiple PersistentVolumes (PVs) of different types and sizes for its operation. From an application perspective, there are three different things that need to be persisted:</p>
+<h1 id="configure-persistentvolumeclaims-pvcs">Configure PersistentVolumeClaims (PVCs)</h1>
+<p>To run HCL Digital Experience 9.5 Container deployments in your Kubernetes or OpenShift cluster, you need to set up PersistentVolumes (PVs) on your cluster and configure the Helm Chart to create the appropriate PersistentVolumeClaims (PVCs).</p>
+<p>Before you proceed, review the <a href="persistent_volumes_helm.md">Persistent Volumes and related operations considerations</a> topic in the DX Help Center.</p>
+<p><strong>Note:</strong> The provisioning of PersistentVolumes (PVs) may differ based on your cluster configuration and your cloud provider. Please reference the documentation of your cloud provider for additional information.</p>
+<h2 id="persistent-volume-types">Persistent Volume Types</h2>
+<p><strong>Important note:</strong> Ensure that your PersistentVolumes (PVs) are created with the Reclaim Policy set to RETAIN. This allows for the reuse of PVs after a PersistentVolumeClaim (PVC) is deleted. This is important to keep data persisted, for example, between deployments or tests. Refrain from using the Reclaim Policy DELETE unless you have the experience in managing these operations successfully, to avoid unpredictable results. This is not recommended in production use, as deleting PVCs causes the Kubernetes or OpenShift cluster to delete the bound PV as well, thus, deleting all the data on it.</p>
 <ul>
-<li>Profiles (called <code>wp_profile</code> and <code>cw_profile</code>)</li>
-<li>Logs</li>
-<li>Transaction logs</li>
+<li>
+<p><strong><code>ReadWriteOnce</code> (RWO)</strong></p>
+<p><code>ReadWriteOnce</code> PVs allow only one pod per volume to perform reading and writing transactions. This means that the data on that PV cannot be shared with other pods and is linked to one pod at a time.</p>
+<p>In the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm, the only DX applications leveraging RWO PVs are Core and Persistence.</p>
+<p>Information regarding how to calculate the number of required volumes for the DX Core and Persistence applications is presented in the <a href="persistent_volumes_helm.md">Persistent Volumes and related operations considerations</a> topic in the DX Help Center.</p>
+<p>Since Core requires RWO PVs per pod, it may be necessary to have auto-provisioning of such volumes configured in your cluster if you don't know the final maximum number of possible Core pods running at the same time. Each Core pod requires 2 RWO PVs.</p>
+<p>Since the number of pods for Persistence is limited by design, you need 2 RWO PVs for Persistence.</p>
+</li>
+<li>
+<p><strong><code>ReadWriteMany</code> (RWX)</strong></p>
+<p><code>ReadWriteMany</code> PVs support read and write operations by multiple pods. This means the data on that PV can be shared with other pods and can be linked to multiple pods at a time.</p>
+<p>In the HCL Digital Experience 9.5 Kubernetes and OpenShift deployment using Helm the only DX applications leveraging RWX PVs are Core and Digital Asset Management.</p>
+<p>Since the PV can be shared between all Core pods, you need one (1) RWX PV for Core, regardless of the pod count. Since the PV can be shared between all Digital Asset Management pods, you need one (1) RWX PV for Digital Asset Management, regardless of the pod count.</p>
+</li>
 </ul>
-<p>While the profile needs to be shared between all DX 9.5 Core Pods, the logs and transaction logs are per Pod and not shared. This means that the persistent volume used for the profile must be <code>ReadWriteMany</code> (RWX).</p>
-<p>The persistent volumes used for logs and transaction logs are established as <code>ReadWriteOnce</code> (RWO) for proper operations performance.</p>
-<p>For example, in a DX 9.5 Core deployment:</p>
-<p>To deploy one Core Pod, 3 PVs will be needed. To deploy two Core Pods, the number of required PVs increases by two, resulting in 5 PVs needed, since the second Pod shares the existing profile PV with the first Pod, but requires its own log and transaction log PVs.</p>
-<p>The following formula example can be used to calculate the required PV count per Core Pods to be deployed:</p>
-<pre><code># Formula to calculate PV count
-n(PV) = 1 + m(Core Pods) * 2
-# E.g. for 3 Pods: 1 + 3 * 2 = 7 PVs
+<h2 id="configuration-parameters">Configuration parameters</h2>
+<p>To access the PersistentVolumes (PVs) on your cluster, the HCL Digital Experience 9.5 Kubernetes or OpenShift deployment using Helm creates PersistentVolumeClaims (PVCs) that binds the PVs to the corresponding pods.</p>
+<p>Each PVC that applications require allows you to configure the following parameters, as shown below. For a PVC of the Core application:</p>
+<pre><code># Persistent Volume Setup
+volumes:
+  # Persistent Volumes for Core
+  core:
+    # Shared profile PVC shared by all Core pods
+    profile:
+      storageClassName: &quot;manual&quot;
+      requests:
+        storage: &quot;10Gi&quot;
+      # Optional volume name to specifically map to
+      volumeName:
 </code></pre>
-<p>In typical operations, the persistent volumes for logs and transaction logs are relatively small.</p>
-<h2 id="digital-asset-management">Digital Asset Management</h2>
-<p>The Digital Asset Management (DAM) application requires one (1) PV for storing binary asset data. This persistent volume is shared between all Digital Asset Management Pods. The PV used must be <code>ReadWriteMany (RWX)</code>.</p>
-<h2 id="persistence">Persistence</h2>
-<p>Persistence consists of at least two Pods. One which acts as a read/write primary node, and at least one that acts as a read-only fallback.</p>
-<p>All Persistence Pods work with <code>ReadWriteOnce</code> (RWO) persistent volumes, since there is no sharing of storage between the Pods.</p>
-<p>Therefore, the minimum required amount of PVs for Persistence is 2.</p>
-<h2 id="remote-search">Remote Search</h2>
-<p>Remote Search requires 1 persistent volume for storing the profile (called <code>prs_profile</code>) with the type <code>ReadWriteOnce</code> (RWO).</p>
-<p>Remote Search is limited to only one Pod, therefore, requires one PV for that Pod.</p>
-<p>Refer to <strong><a href="helm_configure_networking.md">Networking configuration</a></strong> for next steps.</p>
-<p><strong>Parent topic:</strong><a href="../containerization/helm_overview.md">Overview of the Helm architecture</a></p>
+<p><strong>Important note:</strong> Make sure to properly define the PVC configuration in your custom-values.yaml file before running the deployment. This avoids issues when trying to get your deployment up and running.</p>
+<ul>
+<li>
+<p><strong><em>*StorageClassName</em></strong>*</p>
+<p>Depending on your Cluster configuration, you may have configured a specific <code>StorageClass</code> that should be used for your PVs and the PVCs of HCL Digital Experience.</p>
+<p>This property allows you to enter the name of the <code>StorageClass</code> you want the deployment to use. PVCs then only accepts PVs that match the <code>StorageClassName</code> you have defined in the configuration. If there are no PVs that match, the pods remain pending and do not start until a fitting PV is provided by the cluster.</p>
+<p>If you enter an empty <code>StorageClassName</code>, Kubernetes falls back to the default <code>StorageClass</code> configured in your Cluster. Refer to your cloud provider for additional information about your default StorageClass, since this depends on your Kubernetes or OpenShift environment.</p>
+<p>Reference the original values.yaml file you have extracted as outlined in the <em>Prepare configuration</em> topic for all configurable PVCs.</p>
+</li>
+<li>
+<p><strong><code>Requests</code></strong></p>
+<p><strong>Storage</strong></p>
+<p>Storage allows you to define the amount of space that is required by the PVC. Once defined, it only accepts PVs that have the same or more storage capacity as requested. If there are no PVs matching the definitions, the pods remain pending and do not start until a properly-sized PV is provided by the cluster.</p>
+</li>
+<li>
+<p><strong><code>VolumeName</code></strong></p>
+<p>If you want your deployment to pick up a specific PV that you have created, use of the <code>VolumeName</code> can define that instruction. Ensure that the PV you created has a unique name. Then, add that name as a configuration parameter for the PVC.</p>
+<p>The PVCs only matches with a PV of that name, matching the other requirements-like type (<code>RWO/RWX</code>, as defined by the deployment itself), storage capacity, and <code>StorageClassName</code>.</p>
+<p>This allows you to properly prepare your PVs beforehand and ensure that the applications store their data where you want them to.</p>
+</li>
+</ul>
+<h2 id="sample-pvc-configurations">Sample PVC configurations</h2>
+<p>The following are some examples for configuration of the PersistentVolumeClaims (PVCs) using your custom-values.yaml:</p>
+<p><strong>Fallback to default <code>StorageClass</code> for all applications</strong></p>
+<p>Leaving an empty <code>StorageClassName</code> causes Kubernetes or OpenShift to fall back to the <code>StorageClass</code> that has been configured as the default one in your cluster:</p>
+<pre><code># Persistent Volume Setup
+volumes:
+  # Persistent Volumes for Core
+  core:
+    # Shared profile PVC shared by all Core pods
+    profile:
+      storageClassName: &quot;&quot;
+    # Transaction Log PVC, one per Core pod
+    tranlog:
+      storageClassName: &quot;&quot;
+    # Application Log PVC, one per Core pod
+    log:
+      storageClassName: &quot;&quot;
+  # Persistent Volumes for Digital Asset Management
+  digitalAssetManagement:
+    # Binary storage PVC, shared by all Digital Asset Management Pods
+    binaries:
+      storageClassName: &quot;&quot;
+  # Persistent Volumes for Persistence
+  persistence:
+    # Database PVC, one per Persistence pod
+    database:
+      storageClassName: &quot;&quot;
+  # Persistent Volumes for Open LDAP
+  openLdap:
+    # slapd directory PVC, one per Open LDAP pod
+    slapd:
+      storageClassName: &quot;&quot;
+    # certificate directory, on per Open LDAP pod
+    certificate:
+      storageClassName: &quot;&quot;
+    # ldap directory PVC, one per Open LDAP pod
+    ldap:
+      storageClassName: &quot;&quot;
+  # Persistent Volumes for Remote Search
+  remoteSearch:
+    # Remote Search profile PVC, one per Remote Search pod
+    prsprofile:
+      storageClassName: &quot;&quot;
+
+</code></pre>
+<p><strong>Specific StorageClasses for all applications</strong></p>
+<p>Setting the <code>StorageClassName</code> to <code>mycloudstorage</code> causes Kubernetes or OpenShift to create PVCs that only accepts PVs with the <code>StorageClass</code> <code>mycloudstorage</code>:</p>
+<pre><code># Persistent Volume Setup
+volumes:
+  # Persistent Volumes for Core
+  core:
+    # Shared profile PVC shared by all Core pods
+    profile:
+      storageClassName: &quot;mycloudstorage&quot;
+    # Transaction Log PVC, one per Core pod
+    tranlog:
+      storageClassName: &quot;mycloudstorage&quot;
+    # Application Log PVC, one per Core pod
+    log:
+      storageClassName: &quot;mycloudstorage&quot;
+  # Persistent Volumes for Digital Asset Management
+  digitalAssetManagement:
+    # Binary storage PVC, shared by all Digital Asset Management Pods
+    binaries:
+      storageClassName: &quot;mycloudstorage&quot;
+  # Persistent Volumes for Persistence
+  persistence:
+    # Database PVC, one per Persistence pod
+    database:
+      storageClassName: &quot;mycloudstorage&quot;
+  # Persistent Volumes for Open LDAP
+  openLdap:
+    # slapd directory PVC, one per Open LDAP pod
+    slapd:
+      storageClassName: &quot;mycloudstorage&quot;
+    # certificate directory, on per Open LDAP pod
+    certificate:
+      storageClassName: &quot;mycloudstorage&quot;
+    # ldap directory PVC, one per Open LDAP pod
+    ldap:
+      storageClassName: &quot;mycloudstorage&quot;
+  # Persistent Volumes for Remote Search
+  remoteSearch:
+    # Remote Search profile PVC, one per Remote Search pod
+    prsprofile:
+      storageClassName: &quot;mycloudstorage&quot;
+
+</code></pre>
+<p><strong>Specific volume names</strong></p>
+<p>Specifying a name ensures that Kubernetes or OpenShift only assigns PVs with the matching name to the PVCs created for the applications:</p>
+<pre><code># Persistent Volume Setup
+volumes:
+  # Persistent Volumes for Core
+  core:
+    # Shared profile PVC shared by all Core pods
+    profile:
+      storageClassName: &quot;mycloudstorage&quot;
+      # Optional volume name to specifically map to
+      volumeName: &quot;core-profile&quot;
+  # Persistent Volumes for Digital Asset Management
+  digitalAssetManagement:
+    # Binary storage PVC, shared by all Digital Asset Management Pods
+    binaries:
+      storageClassName: &quot;mycloudstorage&quot;
+      # Optional volume name to specifically map to
+      volumeName: &quot;dam-binaries&quot;
+
+</code></pre>
+<p><strong>Adjusted volume size for Core PVCs</strong></p>
+<p>You may override the default sizes for PVCs by adjusting the storage requests:</p>
+<pre><code># Persistent Volume Setup
+volumes:
+  # Persistent Volumes for Core
+  core:
+    # Shared profile PVC shared by all Core pods
+    profile:
+      storageClassName: &quot;mycloudstorage&quot;
+      requests:
+        storage: &quot;150Gi&quot;
+    # Transaction Log PVC, one per Core pod
+    tranlog:
+      storageClassName: &quot;mycloudstorage&quot;
+      requests:
+        storage: &quot;1Gi&quot;
+    # Application Log PVC, one per Core pod
+    log:
+      storageClassName: &quot;mycloudstorage&quot;
+      requests:
+        storage: &quot;1Gi&quot;
+
+</code></pre>
+<h2 id="sample-persistent-volume-definitions">Sample Persistent Volume definitions</h2>
+<p><strong>Sample <code>StorageClass</code></strong></p>
+<p>It is recommended to have a separate <code>StorageClass</code> for HCL Digital Experience 9.5 deployments in order to prevent other deployed applications in the same Kubernetes or OpenShift cluster to interfere with Persistent Volumes (PVs) that should only be used by HCL Digital Experience.</p>
+<p>The following example shows a <code>StorageClass</code> with the name <code>dx-deploy-stg</code> that can be created in your cluster for that purpose:</p>
+<pre><code>kind: StorageClass 
+apiVersion: storage.k8s.io/v1 
+metadata: 
+  name: dx-deploy-stg 
+provisioner: kubernetes.io/no-provisioner 
+reclaimPolicy: Retain 
+volumeBindingMode: WaitForFirstConsumer 
+
+</code></pre>
+<p>Applying this yaml on your Kubernetes or OpenShift cluster creates the <code>StorageClass</code> as a cluster-wide resource.</p>
+<p><strong>Sample Persistent Volume</strong></p>
+<p>To leverage the <code>StorageClass</code> you created, you can use the following Persistent Volume example, which connects to an NFS Server of your choice to provide a PV:</p>
+<pre><code>kind: PersistentVolume 
+apiVersion: v1
+metadata:
+  name: wp-profile-volume 
+spec: 
+  capacity: 
+  storage: 100Gi    
+  nfs: 
+    server: your_nfs_server.com 
+    path: /exports/volume_name 
+  accessModes: 
+  - ReadWriteMany 
+  persistentVolumeReclaimPolicy: Retain 
+  storageClassName: dx-deploy-stg 
+  mountOptions: 
+  - hard 
+  - nfsvers=4.1 
+  - rsize=8388608 
+  - wsize=8388608 
+  - timeo=600 
+  - retrans=2 
+  - noresvport 
+  volumeMode: Filesystem
+
+</code></pre>
+<p>Refer to <strong><a href="../helm_configure_networking/">Networking configuration</a></strong> for the next steps.</p>
+<hr />
+<p><strong>Parent topic:</strong><a href="../containerization/helm_deployment.md">Deploying container platforms using Helm</a></p>
 
               
             </article>
@@ -1996,10 +2161,10 @@ n(PV) = 1 + m(Core Pods) * 2
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.8aa65030.min.js"></script>
       
     
   </body>

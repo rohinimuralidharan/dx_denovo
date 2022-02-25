@@ -2,8 +2,8 @@ title: DX on Containers
 nav:
     - deployment.md
     - overview.md
-    - limitations_requirements.md
     - c_kubesupportstatement.md
+    - docker
     - helm
    #  - docker
 

@@ -2,9 +2,7 @@ nav:
     - index.md
     - overview
     - whatsnew
-    - docker
     - containerization
     - DX Traditional: dxtraditional
-    - Core capabilities: corecapabilities
+    - Working with DX: corecapabilities
     - Latest features: allnewfeatures
-    - ...
