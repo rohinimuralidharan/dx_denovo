@@ -39,10 +39,10 @@ You need to have `tar` and HCL DX Helm Chart downloaded. Your `kubectl` configur
 2.  Execute the following commands to update the CRDs:
 
     ```
-    <p># Extract CRD directory from downloaded Helm Chart</p>
-    tar vxf hcl-dx-deployment-*.tgz hcl-dx-deployment/crds
-    <p>Apply extracted CRDs on cluster level</p>
-    kubectl apply -f hcl-dx-deployment/crds
+       # Extract CRD directory from downloaded Helm Chart\
+          tar vxf hcl-dx-deployment-*.tgz hcl-dx-deployment/crds\
+       # Apply extracted CRDs on cluster level\
+           kubectl apply -f hcl-dx-deployment/crds
     ```
 
 After the action is completed, you can proceed with the DX update procedure. This step is required to be executed only once.
@@ -59,10 +59,10 @@ After the action is completed, you can proceed with the DX update procedure. Thi
 
     If you have CF199 deployed, ensure that you remove the `operatorToHelm` configuration from the custom-values.yaml file before upgrading to CF200, irrespective of whether the property is enabled or not.
 
-    ```py
-    migration:
-      operatorToHelm:
-        enabled: true
+    ```
+    migration: </br>
+      operatorToHelm: </br>
+        enabled: true 
     ```
 
     **Note:** The `operatorToHelm` configuration property is not supported in CF200, hence it must be removed. This property was introduced in CF199 to facilitate migration from the previous Operator-based deployments to Helm-based deployments.
@@ -75,10 +75,10 @@ After the action is completed, you can proceed with the DX update procedure. Thi
 
     After making the changes to the custom-values.yaml file, use the following command to upgrade your HCL DX 9.5 deployment to CF197 and later release version:
 
-    ```py
-    # Helm upgrade command
-    helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-                        
+    \# Helm upgrade command:
+
+    ```    
+    helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz                      
     ```
 
     In this example:

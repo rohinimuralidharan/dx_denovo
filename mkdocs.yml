@@ -13,6 +13,7 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+#    - content.code.annotate
   # extra_css:
   #   - stylesheets/sofy.css
   # extra_javascript:
@@ -25,4 +26,5 @@ repo_name: CWPdoc/dx-mkdocs/docs/
 plugins:
   - awesome-pages
   - search
-
+#markdown_extensions:
+#  - pymdownx.highlight:
