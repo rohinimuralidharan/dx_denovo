@@ -50,7 +50,7 @@ After the action is completed, you can proceed with the DX update procedure. Thi
 
 1.  **Populate your repository with the new images**
 
-    Download the new HCL DX 9.5 container update images you need to upgrade and ensure that they are available in the image repository specified in your custom-values.yaml file. See the [Docker image list](https://help.hcltechsw.com/digital-experience/9.5/containerization/docker.html) for the latest HCL DX 9.5 container update images available.
+    Download the new HCL DX 9.5 container update images you need to upgrade and ensure that they are available in the image repository specified in your custom-values.yaml file. See the [Docker image list](https://help.hcltechsw.com/digital-experience/9.5/containerization/docker.md) for the latest HCL DX 9.5 container update images available.
 
 2.  **Download the Helm charts for the version to be installed**
 

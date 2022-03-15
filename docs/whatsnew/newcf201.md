@@ -29,7 +29,7 @@ See the [Using DAM Extensibility](../containerization/dam_extensibility.md) Hel
 
 New features and updates available for the Script Application include a new configuration task for use to configure Web Content Manager properties used to run Single Page Applications \(SPAs\) that use React or Angular. Improvements are added to support uploads of minified content for use in production SPAs. An out-of-the-box React profile, “Deferred with React,” is added for use with the [Digital Experience 8.5 Theme](../dev-theme/themeopt_defaultparts.md).
 
-See the Script Application Improvements topic in the [HCL Digital Experience 9.5](../script-portlet/script_app_improvements.md) or [HCL Digital Experience 8.5](https://help.hcltechsw.com/digital-experience/8.5/script-portlet/script_app_improvements.html) Help center pages, as applicable to your HCL DX deployment, for more information.
+See the Script Application Improvements topic in the [HCL Digital Experience 9.5](../script-portlet/script_app_improvements.md) or [HCL Digital Experience 8.5](https://help.hcltechsw.com/digital-experience/8.5/script-portlet/script_app_improvements.md) Help center pages, as applicable to your HCL DX deployment, for more information.
 
 ## New HCL Digital Experience 9.5 Release Artifacts supporting CICD release processes
 

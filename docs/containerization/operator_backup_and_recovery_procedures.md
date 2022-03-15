@@ -80,7 +80,7 @@ The following sections describe how the administrators can create and manage bac
 
     After the backup command is completed, it is recommended that a copy of the resulting file is created and placed to an alternate long term storage.
 
-    See the [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) topic for more information.
+    See the [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.md) topic for more information.
 
 -   **3. Digital Asset Management media backup**
 
@@ -102,7 +102,7 @@ tar -C/ -cvpzf backupmlcfg.tar.gz --exclude=/backupmlcfg.tar.gz --one-file-syste
 
             ![](../images/backup_restore_dam_media2.png "Example 2:")
 
-            See the [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.html) topic for more information.
+            See the [Backup and restore DAM image](../digital_asset_mgmt/dam_backup_restore_image.md) topic for more information.
 
         Alternatively, the [Kubernetes documentation](https://kubernetes.io/docs/home/) pages present additional options to backup and clone persistent volumes.
 

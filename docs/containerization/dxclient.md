@@ -13,7 +13,7 @@ DXClient is enabled in supported Kubernetes platforms from HCL Digital Experienc
 
 **DXConnect**
 
-DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../config/cw_overview.html). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
+DXConnect is a servlet-based application deployed on top of IBM WebSphere Application Server in the HCL DX 9.5 CF19 and later deployments, under the [Configuration Wizard profile - `cw_profile`](../config/cw_overview.md). DXConnect enables the DXClient tool to connect over an HTTP or HTTPS connection from a client development machine or remote server to a source or target HCL DX 9.5 server to execute certain tasks requested via DXClient commands.
 
 ## Architecture
 
@@ -158,7 +158,7 @@ See video: [Getting Started with DXClient on Red Hat OpenShift using HCL Digital
     ```
 
 2.  Ensure that Node.js version 12.18.3 or later version is installed to the local workstation. The DXClient tool is supported on Microsoft Windows, Linux, and Apple macOS workstations and automation servers.
-3.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../9.5/containerization/docker.html) topic for the latest list of HCL DX 9.5 files available for download.
+3.  Download the DXClient.zip file \(DXClient\_VX\_XXXXXXXX-XXXX.zip\) to a local directory on the local workstation from your DX 9.5 CF19 or later entitlements on the [HCL Software License Portal](https://www.hcltech.com/software/support/release). Reference the [Docker](../../9.5/containerization/docker.md) topic for the latest list of HCL DX 9.5 files available for download.
 4.  Extract the DXClient.zip file locally.
 5.  From the extracted folder, run the following command.
 

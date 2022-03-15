@@ -17,7 +17,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
         **Note:** HCL Digital Experience is input-output \(I/O\) intensive which requires a high performing file system for optimization.
 
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 Video: [Getting Started to deploy HCL DX 9.5 in Red Hat OpenShift](https://www.youtube.com/watch?v=xXsRECRoV7g&feature=youtu.be)
 

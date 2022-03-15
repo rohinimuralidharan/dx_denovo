@@ -13,11 +13,15 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+  # extra_css:
+  #   - stylesheets/sofy.css
+  # extra_javascript:
+  #   - javascripts/sofy.js
   custom_dir: theme_overrides/
   icon:
     repo: fontawesome/brands/github
-repo_url: https://rohinimuralidharan.github.io/dx_denovo/site/
-repo_name: rohinimuralidharan/dx_anew
+repo_url: https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/docs/
+repo_name: CWPdoc/dx-mkdocs/docs/
 plugins:
   - awesome-pages
   - search

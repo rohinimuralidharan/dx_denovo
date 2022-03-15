@@ -8,7 +8,7 @@ Follow these steps to deploy HCL Digital Experience 9.5 CF182 and later containe
 
 If deploying HCL DX 9.5 Container Update CF191 and earlier, view the instructions to deploy using script commands instead of the dxctl tool as described below in this Help Center section.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file list in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file list in the [Docker deployment](../containerization/docker.md) topic.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
 3.  The following tools must be installed on a machine other than the Portal server:
     -   Docker
     -   Microsoft Azure CLI
-    -   If deploying Digital Experience Container Update CF192 and later, the [dxctl tool](../containerization/dxtools_dxctl.html) is used to install and configure the deployment
+    -   If deploying Digital Experience Container Update CF192 and later, the [dxctl tool](../containerization/dxtools_dxctl.md) is used to install and configure the deployment
 4.  Volume requirement:
     -   It requires an AccessMode of **ReadWriteMany**.
     -   It requires a minimum of **40 GB**, with the default request set to **100 GB**.
@@ -509,7 +509,7 @@ https://EXTERNAL_IP/wps/portal
 
 ## Update the HCL Digital Experience \(DX\) 9.5 Azure AKS deployment to later HCL DX 9.5 Container Update releases
 
-To update the deployment to later [HCL DX 9.5 Container Update](../containerization/docker.html) releases, follow these steps:
+To update the deployment to later [HCL DX 9.5 Container Update](../containerization/docker.md) releases, follow these steps:
 
 1.  Update the deployment properties file with new image values, and run the `Update` command.
 
@@ -546,7 +546,7 @@ To update the deployment to later [HCL DX 9.5 Container Update](../containerizat
     ```
 
 
-**Additional considerations:** For example, once the database is transferred, the `DBTYPE` must be updated so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas could be increased. There are additional options to [customize the deployment](../containerization/customizing_container_deployment.html).
+**Additional considerations:** For example, once the database is transferred, the `DBTYPE` must be updated so you can scale the instances higher. Additionally, once the database is transferred, the number of replicas could be increased. There are additional options to [customize the deployment](../containerization/customizing_container_deployment.md).
 
 ## Delete the HCL Digital Experience \(DX\) 9.5 CF192 and later release Azure AKS deployment
 

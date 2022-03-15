@@ -12,7 +12,7 @@ Prior to using the following procedures, it is assumed that the HCL DX Administr
     -   **Docker**
     -   **AWS Command Line Interface \(CLI\)** - used to get image details.
     -   **dxctl tool** - If deploying Digital Experience Container Update CF192 or later, the dcxtl tool is used to install and configure the deployment.
-        -   Documentation resource: [Deploy DX Container to Microsoft Azure Kubernetes Service \(AKS\)](../containerization/azure_aks.html)
+        -   Documentation resource: [Deploy DX Container to Microsoft Azure Kubernetes Service \(AKS\)](../containerization/azure_aks.md)
 -   Volume requirement:
     -   Requires an AccessMode of ReadWriteMany
     -   Requires a minimum of **40 GB**, with the default request set to **100 GB**

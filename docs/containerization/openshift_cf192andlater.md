@@ -22,7 +22,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
 
 Follow these steps to deploy HCL Digital Experience 9.5 container release in Red Hat OpenShift Container Update CF192 and later. If deploying a Container Update CF191 and earlier, see the instructions to deploy using script commands instead of the dxctl tool in this section.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 Video: [Getting Started to deploy HCL DX 9.5 in Red Hat OpenShift](https://www.youtube.com/watch?v=xXsRECRoV7g&feature=youtu.be)
 
@@ -168,7 +168,7 @@ docker load < hcl-dx-core-image-v95_xxxxxxxx-xxxx.tar.gz
 
 ## Update
 
-To update the deployment to later **[HCL DX 9.5 Container Update](https://help.hcltechsw.com/digital-experience/9.5/containerization/docker.html)** releases, follow these steps:
+To update the deployment to later **[HCL DX 9.5 Container Update](https://help.hcltechsw.com/digital-experience/9.5/containerization/docker.md)** releases, follow these steps:
 
 1.  If using HCL DX 9.5 Container Update CF191 and earlier release, update the deployment properties file with the new image values, and then run the Update command.
 

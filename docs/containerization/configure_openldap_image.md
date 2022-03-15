@@ -97,7 +97,7 @@ data:
 
 Once the OpenLDAP container is fully deployed, the password entry can be removed from the config map.
 
-Sample users have a password of passw0rd. Additional users can be added or changes made to the data using ldapadd, ldapdelete and ldapmodify commands according to instructions in the [OpenLDAP Administrator Guide](https://www.openldap.org/doc/admin24/guide.html).
+Sample users have a password of passw0rd. Additional users can be added or changes made to the data using ldapadd, ldapdelete and ldapmodify commands according to instructions in the [OpenLDAP Administrator Guide](https://www.openldap.org/doc/admin24/guide.md).
 
 Sample ldif file format for adding users:
 

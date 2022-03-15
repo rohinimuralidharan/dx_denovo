@@ -10,19 +10,19 @@ The latest Software Requirements and Updates supporting HCL Digital Experience s
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF19 and higher container release along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine).
 
-See the [Deploy HCL Digital Experience 9.5 Container to Google Kubernetes Engine \(GKE\)](../../9.5/containerization/google_gke.html) topic for more information.
+See the [Deploy HCL Digital Experience 9.5 Container to Google Kubernetes Engine \(GKE\)](../../9.5/containerization/google_gke.md) topic for more information.
 
 ## Hybrid Deployment
 
 The HCL Digital Experience 9.5 Hybrid deployment and topics deliver capability to deploy and manage HCL Digital Experience 9.5 core Portal Server and Web Content Manager services on premises, and connect to cloud native components Digital Asset Management, Content Composer, Experience API and related services in a production environment.
 
-See the [Hybrid Deployment](../../9.5/containerization/hybrid_deployment.html) topic for more information.
+See the [Hybrid Deployment](../../9.5/containerization/hybrid_deployment.md) topic for more information.
 
 ## Progressive Web Application support
 
 Develop support that adds native mobile application experience and performance to your web site using browser-based functionality.
 
-See the [Progressive Web Application](../../9.5/install/progressive_web_applications.html) topic for more information.
+See the [Progressive Web Application](../../9.5/install/progressive_web_applications.md) topic for more information.
 
 ## Google Analytics integration
 
@@ -34,7 +34,7 @@ See the [Integrate Google Analytics with HCL Digital Experience](../install/inte
 
 Use the Mobile Preview simulator to view the presentation of Digital Experience site page components on select mobile devices.
 
-See the [Mobile Preview](../../9.5/install/mobile_preview.html) topic for more information.
+See the [Mobile Preview](../../9.5/install/mobile_preview.md) topic for more information.
 
 ## DXClient and DXConnect tooling supporting CICD release processes
 
@@ -42,7 +42,7 @@ HCL Digital Experience CF19 and higher includes a DXClient toolset, and DX Conne
 
 **Note:** The DXClient tool is not supported for use with HCL DX 9.5 deployments in Red Hat OpenShift or supported Kubernetes platforms. Use of the DXClient tool with those platforms will be available in future HCL DX 9.5 update releases.
 
-See the [DXClient and DXConnect tooling supporting CICD release processes](../../9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.html) topic for more information.
+See the [DXClient and DXConnect tooling supporting CICD release processes](../../9.5/containerization/deploy_dx_components_using_hcl_dx_client_and_dx_connect.md) topic for more information.
 
 ## Digital Asset Management and Kaltura Integration
 
@@ -54,17 +54,17 @@ See the [Configure DAM - Kaltura integration](https://corp.kaltura.com/video-con
 
 New HCL DX APIs are introduced with the HCL DX CF19 release:
 
--   [Web content image renditions interactions REST API](../wcm/manage_web_content_image_renditions_interactions_by_using_rest.html)
+-   [Web content image renditions interactions REST API](../wcm/manage_web_content_image_renditions_interactions_by_using_rest.md)
 -   [Web Content Library Locale Query](../wcm/wcm_rest_crud_libraries.html#wcm_rest_crud_libraries__read_existing_library)
 -   [Workflow Comments API](../wcm/wcm_rest_crud_workflow.html#wcm_rest_crud_workflow__section_q5l_qw1_knb)
--   [Using XML Access to export and import Digital Asset Management assets](../../9.5/admin-system/adxmldam.html)
+-   [Using XML Access to export and import Digital Asset Management assets](../../9.5/admin-system/adxmldam.md)
 
 ## New HCL Digital Experience ‘How To’ Videos
 
 Take advantage of new step by step guidance for HCL Digital Experience practitioners presented in several new videos. See the following HCL Digital Experience Help Center topics:
 
--   [Configure the OpenLDAP container image to the HCL DX 9.5 Container Deployment](../../9.5/containerization/configure_openldap_image.html)
--   [How to manage syndicators and subscribers](../../9.5/panel_help/wcm_syndication.html)
+-   [Configure the OpenLDAP container image to the HCL DX 9.5 Container Deployment](../../9.5/containerization/configure_openldap_image.md)
+-   [How to manage syndicators and subscribers](../../9.5/panel_help/wcm_syndication.md)
 
 **Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
 

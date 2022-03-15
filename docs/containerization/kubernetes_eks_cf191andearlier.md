@@ -42,7 +42,7 @@ Prior to using the procedure below, it is assumed that the HCL DX Administrator 
 
 Follow these steps to deploy HCL Digital Experience 9.5 CF183 and higher container release, along with Ambassador to Kubernetes, as verified in [Amazon Elastic Kubernetes Service \(Amazon EKS\)](https://aws.amazon.com/eks/). This deployment relies heavily on Kubernetes Operators for full functionality.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 ## DX Container Management
 

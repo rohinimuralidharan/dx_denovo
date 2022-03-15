@@ -14,7 +14,7 @@ This section assumes that you prepared your cluster and your custom-values.yaml
 
     After making the needed changes to your custom-values.yaml file, use the following command:
 
-    ```
+    ```py
     # Helm upgrade command
     helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
     ```

@@ -1,0 +1,2379 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>How to use REST with drafts and workflows - HCL Digital Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-use-rest-with-drafts-and-workflows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HCL Digital Experience" class="md-header__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to use REST with drafts and workflows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CWPdoc/dx-mkdocs/docs/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/intr_new95/" class="md-tabs__link">
+        Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../whatsnew/container_update_releases/" class="md-tabs__link">
+        What's new?
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../containerization/deployment/" class="md-tabs__link">
+        DX Cloud Native
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../dxtraditional" class="md-tabs__link">
+      DX Traditional
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-tabs__link">
+        Designing with DX
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HCL Digital Experience" class="md-nav__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CWPdoc/dx-mkdocs/docs/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/intr_new95/" class="md-nav__link">
+        HCL Digital Experience 9.5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/intr_ovr/" class="md-nav__link">
+        Product capabilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          What's new?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="What's new?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          What's new?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/container_update_releases/" class="md-nav__link">
+        Cumulative Fixes for DX Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          CF19
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CF19" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          CF19
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf201/" class="md-nav__link">
+        What's new in Container Update CF201?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf200/" class="md-nav__link">
+        What's new in Container Update CF200?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf199/" class="md-nav__link">
+        What's new in Container Update CF199?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf198/" class="md-nav__link">
+        What's new in Container Update CF198?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf197/" class="md-nav__link">
+        What's new in Container Update CF197?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf196/" class="md-nav__link">
+        What's new in Container Update CF196?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf195/" class="md-nav__link">
+        What's new in Container Update CF195?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf194/" class="md-nav__link">
+        What's new in Container Update CF194?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf193/" class="md-nav__link">
+        What's new in Container Update CF193?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf192/" class="md-nav__link">
+        What's new in Container Update CF192?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf191/" class="md-nav__link">
+        What's new in Container Update CF191?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf19/" class="md-nav__link">
+        What's new in Container Update CF19?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          CF18
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CF18" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          CF18
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf184/" class="md-nav__link">
+        What's new in Container Update CF184?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf183/" class="md-nav__link">
+        What's new in Container Update CF183?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf182/" class="md-nav__link">
+        What's new in Container Update CF182?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf181/" class="md-nav__link">
+        What's new in Container Update CF181?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf18/" class="md-nav__link">
+        What's new in CF18?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          CF17
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CF17" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          CF17
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf173/" class="md-nav__link">
+        What's new in Container Update CF173?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf172/" class="md-nav__link">
+        What's new in Container Update CF172?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf171/" class="md-nav__link">
+        What's new in Container Update CF171?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf17/" class="md-nav__link">
+        What's new in CF17? 9.5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          DX Cloud Native
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DX Cloud Native" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DX Cloud Native
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/deployment/" class="md-nav__link">
+        Digital Experience on containerized platforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/overview/" class="md-nav__link">
+        Containerization overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/c_kubesupportstatement/" class="md-nav__link">
+        Container platform support matrix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Docker images
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docker images" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Docker images
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker_overview/" class="md-nav__link">
+        Digital Experience on Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker/" class="md-nav__link">
+        Docker image list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker_image_deployment/" class="md-nav__link">
+        Docker image deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker_compose/" class="md-nav__link">
+        Docker image deployment using Docker Compose
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Deploying using Helm charts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deploying using Helm charts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Deploying using Helm charts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/helm/" class="md-nav__link">
+        Helm-based deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_2">
+          DX Helm architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DX Helm architecture" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          DX Helm architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/helm_overview/" class="md-nav__link">
+        Overview of the Helm architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/core_interactions_kubernetes/" class="md-nav__link">
+        DX 9.5 Core Interactions with Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/deploy_applications_using_helm/" class="md-nav__link">
+        Deploying DX 9.5 applications to container platforms using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/persistent_volumes_helm/" class="md-nav__link">
+        PersistentVolumes and related operations considerations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/configure_deployment_helm/" class="md-nav__link">
+        Configuring DX 9.5 deployments to container platforms using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/container_scaling_helm/" class="md-nav__link">
+        Scaling DX 9.5 container deployments using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/dam_persistence_architecture/" class="md-nav__link">
+        Digital Asset Management persistence architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/helm_deployment/" class="md-nav__link">
+        Deploying on containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_4" type="checkbox" id="__nav_4_5_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_4">
+          Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Planning" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/docker/" class="md-nav__link">
+        Docker image list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/limitations_requirements/" class="md-nav__link">
+        Containerization requirements and limitations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_planning_deployment/" class="md-nav__link">
+        Planning your container deployment using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_persistent_volume_claims/" class="md-nav__link">
+        Configure PersistentVolumeClaims (PVCs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_configure_networking/" class="md-nav__link">
+        Configure networking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_additional_tasks/" class="md-nav__link">
+        Additional Helm tasks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxtraditional" class="md-nav__link">
+        DX Traditional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Designing with DX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Designing with DX" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Designing with DX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Digital Asset Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital Asset Management" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Digital Asset Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-nav__link">
+        Restore Digital Asset Management image to previous version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_operator/" class="md-nav__link">
+        Restore Digital Asset Management image to previous version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/digital_asset_mgmt_overview/" class="md-nav__link">
+        HCL Digital Asset Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/helm_dam_backup_restore_image/" class="md-nav__link">
+        Back up and restore a DAM image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/manage_collections/" class="md-nav__link">
+        Manage collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/operator_dam_backup_restore_image/" class="md-nav__link">
+        Back up and restore a DAM image
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Practitioner Studio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Practitioner Studio" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Practitioner Studio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/practitioner_studio/enable_prac_studio/" class="md-nav__link">
+        How to enable Practitioner Studio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/practitioner_studio/practitionerstudio_overview/" class="md-nav__link">
+        Practitioner Studio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/practitioner_studio/working_prac_studio/" class="md-nav__link">
+        Working with Practitioner Studio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Woodburn Studio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Woodburn Studio" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Woodburn Studio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/woodburn_studio/woodburn_studio/" class="md-nav__link">
+        The Woodburn Studio demo site
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-draft-of-an-item-that-does-not-use-a-workflow" class="md-nav__link">
+    Creating a draft of an item that does not use a workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-draft-in-a-workflow" class="md-nav__link">
+    Creating a draft in a workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-an-item-to-the-next-stage" class="md-nav__link">
+    Moving an item to the next stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-an-item-to-the-previous-stage" class="md-nav__link">
+    Moving an item to the previous stage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#approving-an-item-within-a-workflow" class="md-nav__link">
+    Approving an item within a workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rejecting-an-item-within-a-workflow" class="md-nav__link">
+    Rejecting an item within a workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restarting-a-workflow" class="md-nav__link">
+    Restarting a workflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-comments" class="md-nav__link">
+    Workflow Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-now-and-remove-workflow-apis" class="md-nav__link">
+    Process Now and Remove Workflow APIs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-process-now-api" class="md-nav__link">
+    Using the Process Now API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-remove-workflow-api" class="md-nav__link">
+    Using the Remove Workflow API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-workflow-comments-api" class="md-nav__link">
+    Using the Workflow Comments API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-wcm-add-comment-api" class="md-nav__link">
+    Using the WCM Add Comment API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="how-to-use-rest-with-drafts-and-workflows">How to use REST with drafts and workflows</h1>
+<p>You can use the REST services for HCL Web Content Manager to create drafts, approve items in a workflow, retrieve workflow comments from content items, and move items through different stages of a workflow.</p>
+<p>New with HCL Digital Experience 9.5 Container Update CF181 and higher releases, two new APIs are added to handle <strong>Process Now</strong> and <strong>Remove Workflow</strong> from an item functionality. HCL DX 9.5 CF19 and higher release adds support to retrieve workflow comments from content items.</p>
+<h2 id="creating-a-draft-of-an-item-that-does-not-use-a-workflow">Creating a draft of an item that does not use a workflow</h2>
+<p>You can create a draft of items that do not use workflows.</p>
+<p>To do that, specify explicitly the draft workflow state in the request entry data. For example, to create a link component as draft:</p>
+<pre><code>HTTP/1.1 POST
+
+http://host:port/wps/mycontenthandler/wcmrest/LibraryLinkComponent
+&lt;atom:entry xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;wcm/namespace&quot;&gt;
+    &lt;wcm:name&gt;linkDraft_E&lt;/wcm:name&gt;
+    &lt;atom:link atom:rel=&quot;library&quot; atom:href=&quot;/wps/mycontenthandler/!ut/p/wcmrest/item/d07f0a12-3801-465e-bc20-eaec2cecf5cb&quot;/&gt;
+    &lt;category label=&quot;Draft&quot; scheme=&quot;wcmrest:workflowState&quot; term=&quot;DRAFT&quot;/&gt;
+&lt;/atom:entry&gt;
+
+201 Created
+</code></pre>
+<h2 id="creating-a-draft-in-a-workflow">Creating a draft in a workflow</h2>
+<p>You can use the REST service to create a new draft item. This is equivalent to using the <strong>Create Draft</strong> icon in the authoring portlet.</p>
+<p>A new draft of an item can be created by sending a POST request to the following URI:</p>
+<pre><code>/item/item-uuid/create-draft
+</code></pre>
+<p>For example:</p>
+<pre><code>HTTP/1.1 POST
+http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/create-draft
+
+201 Created
+</code></pre>
+<h2 id="moving-an-item-to-the-next-stage">Moving an item to the next stage</h2>
+<p>You can use the REST service to move an item to the next stage of a workflow. This is equivalent to using the <strong>Next Stage</strong> icon in the authoring portlet.</p>
+<p>An item can be moved to the next stage by sending a POST request to the following URI:</p>
+<pre><code>/item/item-uuid/next-stage
+</code></pre>
+<p>For example:</p>
+<pre><code>HTTP/1.1 POST
+http://host:port/wps/mycontenthandler/wcmrest/item/&lt;item-uuid&gt;/next-stage
+
+201 Created
+</code></pre>
+<h2 id="moving-an-item-to-the-previous-stage">Moving an item to the previous stage</h2>
+<p>You can use the REST service to move an item to the previous stage of a workflow. This is equivalent to using the <strong>Previous Stage</strong> icon in the authoring portlet.</p>
+<p>An item can be moved to the previous stage by sending a POST request to the following URI:</p>
+<pre><code>/item/item-uuid/previous-stage
+</code></pre>
+<p>For example:</p>
+<pre><code>HTTP/1.1 POST
+http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/previous-stage
+
+201 Created
+</code></pre>
+<h2 id="approving-an-item-within-a-workflow">Approving an item within a workflow</h2>
+<p>You can use the REST service to move an item to the next stage of a workflow by approving it. This is equivalent to using the <strong>Approve</strong> icon in the authoring portlet.</p>
+<p>An item can be approved by sending a POST request to the following URI:</p>
+<pre><code>/item/item-uuid/approve
+</code></pre>
+<p>For example:</p>
+<pre><code>HTTP/1.1 POST
+http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/approve
+
+201 Created
+</code></pre>
+<h2 id="rejecting-an-item-within-a-workflow">Rejecting an item within a workflow</h2>
+<p>You can use the REST service to reject an item in a workflow. This is equivalent to using the <strong>Reject</strong> icon in the authoring portlet.</p>
+<p>An item can be rejected by sending a POST request to the following URI:</p>
+<pre><code>/item/item-uuid/reject
+</code></pre>
+<p>For example:</p>
+<pre><code>HTTP/1.1 POST
+http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/reject
+
+201 Created
+</code></pre>
+<h2 id="restarting-a-workflow">Restarting a workflow</h2>
+<p>You can use the REST service to restart a workflow. This is equivalent to using the <strong>Restart</strong> icon in the authoring portlet.</p>
+<p>An item can be restarted by sending a POST request to the following URI:</p>
+<pre><code>/item/item-uuid/restart
+</code></pre>
+<p>For example:</p>
+<pre><code>HTTP/1.1 POST
+http://host:port/wps/mycontenthandler/wcmrest/item/item-uuid/restart
+
+201 Created
+</code></pre>
+<h2 id="workflow-comments">Workflow Comments</h2>
+<p>To ensure that comments are added to workflow stages that require comments, a GET request must be issued to the associated link. This will return an HTML form indicating whether a comment is required.</p>
+<p>To add the comment you either submit the form, or perform an HTTP Post request with a content type of <code>text/plain</code>.</p>
+<p>For example:</p>
+<pre><code>HTTP GET /wps/mycontenthandler/wcmrest/item/84e35979-d7c4-429a-b2ab-eb79abc5debc/next-stage 
+ Accept: text/html 
+
+&lt;html&gt; 
+&lt;b&gt;Next Stage&lt;/b&gt;&lt;br&gt;&lt;br&gt; 
+&lt;form action=&quot;/wps/mycontenthandler/!ut/p/digest!hp5aUN2TU2D-7ziKYRo2-g/wcmrest/item/84e35979-d7c4-429a-b2ab-eb79abc5debc/
+next-stage&quot; enctype=&quot;multipart/form-data&quot; method=&quot;POST&quot;&gt; 
+   &lt;label for=&quot;comment&quot;&gt;&lt;b&gt;*&lt;/b&gt;Enter Comment&lt;/label&gt; 
+   &lt;input id=&quot;comment&quot; name=&quot;comment&quot; type=&quot;text&quot; required/&gt;&lt;br&gt; 
+   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;/input&gt; 
+&lt;/form&gt; 
+&lt;/html&gt; 
+</code></pre>
+<h2 id="process-now-and-remove-workflow-apis">Process Now and Remove Workflow APIs</h2>
+<p>The Process Now and Remove Workflow from an item functionality are equivalent to their functionality in user interfaces:</p>
+<p><img alt="" src="../../assets/Process_Now_API.png" title="Process Now" /></p>
+<p><img alt="" src="../../assets/Remove_Workflow_API.png" title="Remove Workflow" /></p>
+<h2 id="using-the-process-now-api">Using the Process Now API</h2>
+<ul>
+<li>
+<p><strong>Endpoint</strong></p>
+<p>POST request to:</p>
+<p>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;(UUID of the content)>/process-now</p>
+<p>Sample URL:</p>
+<p>localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/process-now</p>
+</li>
+<li>
+<p><strong>Expected Body</strong></p>
+<p>The Body can just have the basic Web Content Manager structure or be empty altogether.</p>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+&lt;/feed&gt;</code></p>
+</li>
+<li>
+<p><strong>Expected Headers</strong></p>
+<p>LTPA token of the user.</p>
+</li>
+<li>
+<p><strong>Return Body</strong></p>
+<p>The item API for the updated item. This is the same result as when calling .../wcmrest/item/</p>
+<p>Sample:</p>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+      &lt;id&gt;wcmrest:09a555cc-05ac-466c-9c8b-80aed68e4f7b&lt;/id&gt;
+      &lt;title xml:lang="en"&gt;dfvdfv&lt;/title&gt;
+      &lt;summary xml:lang="en"&gt;&lt;/summary&gt;
+      &lt;wcm:name&gt;dfvdfv&lt;/wcm:name&gt;
+      &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+      &lt;updated&gt;2020-05-27T14:36:37.371Z&lt;/updated&gt;
+      &lt;published&gt;2020-05-27T14:36:35.689Z&lt;/published&gt;
+      &lt;wcm:created&gt;2020-05-27T14:04:59.407Z&lt;/wcm:created&gt;
+      &lt;author&gt;
+          &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+          &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/
+users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+          &lt;name&gt;wpsadmin&lt;/name&gt;
+      &lt;/author&gt;
+      &lt;wcm:owner&gt;
+          &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+          &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/
+users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+          &lt;name&gt;wpsadmin&lt;/name&gt;
+      &lt;/wcm:owner&gt;
+      &lt;wcm:lastModifier&gt;
+          &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+          &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+          &lt;name&gt;wpsadmin&lt;/name&gt;
+      &lt;/wcm:lastModifier&gt;
+      &lt;wcm:creator&gt;
+          &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+          &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/
+users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+          &lt;name&gt;wpsadmin&lt;/name&gt;
+      &lt;/wcm:creator&gt;
+      &lt;wcm:profile/&gt;
+      &lt;wcm:workflow&gt;
+          &lt;wcm:publishDate&gt;2020-05-30T00:00:00.000Z&lt;/wcm:publishDate&gt;
+      &lt;/wcm:workflow&gt;
+      &lt;link rel="self" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Content/
+09a555cc-05ac-466c-9c8b-80aed68e4f7b" xml:lang="en" label="Read"/&gt;
+      &lt;link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Content/
+09a555cc-05ac-466c-9c8b-80aed68e4f7b" xml:lang="en" label="Edit"/&gt;
+      &lt;link rel="delete" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Content/
+09a555cc-05ac-466c-9c8b-80aed68e4f7b" xml:lang="en" label="Delete"/&gt;
+      &lt;link rel="workflow-stage" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+WorkflowStage/f89d88b6-b375-4a65-9b99-9befdfc721e1" xml:lang="en" label="Workflow Stage"/&gt;
+      &lt;link rel="workflow" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+Workflow/9ed22ac1-0c5a-4236-9e44-0faefd219d89" xml:lang="en" label="Workflow"/&gt;
+      &lt;link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/ac/
+access:oid:Z6QReDeG9E2MQK6LPO6MM06L9O6MMG6MHD6MM4733E4MM07G9OA6IP6O9P83JT623" xml:lang="en" label="Access Control"/&gt;
+      &lt;link rel="library" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Library/
+bfa08d5f-1833-4e4e-9455-d23ad24d1179" xml:lang="en" label="Library"/&gt;
+      &lt;link rel="parent" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/SiteArea/
+9cedbc01-a0a8-4c3f-8051-c9395d13e769" xml:lang="en" label="Parent"/&gt;
+      &lt;link rel="versions" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/item/
+09a555cc-05ac-466c-9c8b-80aed68e4f7b/versions" xml:lang="en" label="Versions"/&gt;
+      &lt;link rel="preview" href="/wps/poc/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcm/
+oid:09a555cc-05ac-466c-9c8b-80aed68e4f7b" xml:lang="en" label="Preview"/&gt;
+      &lt;link rel="edit-media" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+Content/09a555cc-05ac-466c-9c8b-80aed68e4f7b" type="application/vnd.ibm.wcm+xml" xml:lang="en" label="Edit Media"/&gt;
+      &lt;link rel="content-template" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71" xml:lang="en" label="Content Template"/&gt;
+      &lt;link rel="elements" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+Content/09a555cc-05ac-466c-9c8b-80aed68e4f7b/elements" xml:lang="en" label="Elements"/&gt;
+      &lt;category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/&gt;
+      &lt;category scheme="wcmrest:favorite" term="false" xml:lang="en"/&gt;
+      &lt;content type="application/vnd.ibm.wcm+xml"&gt;
+          &lt;wcm:content xmlns="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+                &lt;elements xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+                    &lt;element name="Body"&gt;
+                        &lt;title xml:lang="en"&gt;Body&lt;/title&gt;
+                        &lt;type&gt;RichTextComponent&lt;/type&gt;
+                        &lt;data type="text/html"&gt;
+                            &lt;![CDATA[&lt;p dir="ltr"&gt;dfb&lt;/p&gt;
+]]&gt;
+                        &lt;/data&gt;
+                    &lt;/element&gt;
+                &lt;/elements&gt;
+          &lt;/wcm:content&gt;
+     &lt;/content&gt;
+&lt;/entry&gt;</code></p>
+</li>
+</ul>
+<h2 id="using-the-remove-workflow-api">Using the Remove Workflow API</h2>
+<ul>
+<li>
+<p><strong>Endpoint</strong></p>
+<p><strong>POST request to:</strong></p>
+<p>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;(UUID of the content)>/remove-workflow</p>
+<p><strong>Sample URL:</strong></p>
+<p>localhost:10039/wps/mycontenthandler/wcmrest/item/02894453-b03a-4935-8078-5f8ac923a5b0/remove-workflow</p>
+</li>
+<li>
+<p><strong>Expected Body</strong></p>
+<p>The Body can just have the basic Web Content Manager structure or just be empty altogether.</p>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+&lt;/feed&gt;</code></p>
+</li>
+<li>
+<p><strong>Expected Headers</strong></p>
+<p>LTPA token of the user.</p>
+</li>
+<li>
+<p><strong>Return Body</strong></p>
+<p>The item API for the updated item. The result is the same as when calling .../wcmrest/item/.</p>
+<p>Sample:</p>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+     &lt;id&gt;wcmrest:02894453-b03a-4935-8078-5f8ac923a5b0&lt;/id&gt;
+     &lt;title xml:lang="en"&gt;tedst33&lt;/title&gt;
+     &lt;summary xml:lang="en"&gt;&lt;/summary&gt;
+     &lt;wcm:name&gt;tedst33&lt;/wcm:name&gt;
+     &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+     &lt;updated&gt;2020-05-27T13:26:07.983Z&lt;/updated&gt;
+     &lt;wcm:created&gt;2020-05-27T12:19:05.008Z&lt;/wcm:created&gt;
+     &lt;author&gt;
+          &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+          &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/
+users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+          &lt;name&gt;wpsadmin&lt;/name&gt;
+     &lt;/author&gt;
+     &lt;wcm:owner&gt;
+         &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+         &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/
+users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+         &lt;name&gt;wpsadmin&lt;/name&gt;
+     &lt;/wcm:owner&gt;
+     &lt;wcm:lastModifier&gt;
+         &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+         &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/
+users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+         &lt;name&gt;wpsadmin&lt;/name&gt;
+     &lt;/wcm:lastModifier&gt;
+     &lt;wcm:creator&gt;
+         &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+wcm:distinguishedName&gt;
+         &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/um/
+users/profiles/Z9eAe4JDIJSS6G9P6MMKCJ1P6JMG6NHC6JM4CMPCAMMGCO1CCMR8CNPCGJS06M1&lt;/uri&gt;
+         &lt;name&gt;wpsadmin&lt;/name&gt;
+     &lt;/wcm:creator&gt;
+     &lt;wcm:profile/&gt;
+         &lt;link rel="self" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Content/
+02894453-b03a-4935-8078-5f8ac923a5b0" xml:lang="en" label="Read"/&gt;
+         &lt;link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Content/
+02894453-b03a-4935-8078-5f8ac923a5b0" xml:lang="en" label="Edit"/&gt;
+         &lt;link rel="delete" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Content/
+02894453-b03a-4935-8078-5f8ac923a5b0" xml:lang="en" label="Delete"/&gt;
+         &lt;link rel="create-draft" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+item/02894453-b03a-4935-8078-5f8ac923a5b0/create-draft" xml:lang="en" label="Create Draft"/&gt;
+         &lt;link rel="change-to-draft" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+item/02894453-b03a-4935-8078-5f8ac923a5b0/change-to-draft" xml:lang="en" label="Change To Draft"/&gt;
+         &lt;link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/ac/
+access:oid:Z6QReDeGHCGJSG6K9D6JM8CGPC2MMG6PPCAJM07GPDGJMK663E2MH57IPC2MQ8CG1" xml:lang="en" label="Access Control"/&gt;
+         &lt;link rel="library" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Library/
+bfa08d5f-1833-4e4e-9455-d23ad24d1179" xml:lang="en" label="Library"/&gt;
+         &lt;link rel="parent" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/SiteArea/
+9cedbc01-a0a8-4c3f-8051-c9395d13e769" xml:lang="en" label="Parent"/&gt;
+         &lt;link rel="versions" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/item/
+02894453-b03a-4935-8078-5f8ac923a5b0/versions" xml:lang="en" label="Versions"/&gt;
+         &lt;link rel="preview" href="/wps/poc/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcm/oid:02894453-
+b03a-4935-8078-5f8ac923a5b0" xml:lang="en" label="Preview"/&gt;
+         &lt;link rel="edit-media" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/
+Content/02894453-b03a-4935-8078-5f8ac923a5b0" type="application/vnd.ibm.wcm+xml" xml:lang="en" label="Edit Media"/&gt;
+         &lt;link rel="content-template" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/
+wcmrest/ContentTemplate/3fdeaf06-48d4-4fee-87e7-564d210aee71" xml:lang="en" label="Content Template"/&gt;
+         &lt;link rel="elements" href="/wps/mycontenthandler/!ut/p/digest!rsWBIQ8xIEvedYpzepFP9w/wcmrest/Content/02894453-b03a-4935-8078-5f8ac923a5b0/elements" xml:lang="en" label="Elements"/&gt;
+         &lt;category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/&gt;
+         &lt;category scheme="wcmrest:favorite" term="false" xml:lang="en"/&gt;
+         &lt;content type="application/vnd.ibm.wcm+xml"&gt;
+              &lt;wcm:content xmlns="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+                    &lt;elements xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+                          &lt;element name="Body"&gt;
+                                &lt;title xml:lang="en"&gt;Body&lt;/title&gt;
+                                &lt;type&gt;RichTextComponent&lt;/type&gt;
+                                &lt;data type="text/html"/&gt;
+                          &lt;/element&gt;
+                    &lt;/elements&gt;
+              &lt;/wcm:content&gt;
+       &lt;/content&gt;
+&lt;/entry&gt;</code></p>
+</li>
+</ul>
+<h2 id="using-the-workflow-comments-api">Using the Workflow Comments API</h2>
+<p>The Workflow Comments API supports retrieval of workflow comments for content items included in a defined workflow.</p>
+<ul>
+<li>
+<p><strong>Endpoint</strong></p>
+<p>GET request to retrieve any item - e.g. Content item:</p>
+<p><code>http://host:port/wps/mycontenthandler/wcmrest/Content/&lt;uuid&gt;</code></p>
+<p>Sample URL:</p>
+<p><code>http://dx.dev.com:10039/wps/mycontenthandler/wcmrest/Content/35381882-69e2-4d06-8553-e8bed1e09e68</code></p>
+</li>
+<li>
+<p><strong>Expected Body</strong></p>
+<p>With Payload:</p>
+<p><code>{
+}</code></p>
+</li>
+<li>
+<p><strong>Expected Headers</strong></p>
+<p>LTPA token of the user.</p>
+</li>
+<li>
+<p><strong>Return body:</strong></p>
+<p>Result: 200 if successful.</p>
+<p>Result Payload:</p>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+    &lt;id&gt;wcmrest:35381882-69e2-4d06-8553-e8bed1e09e68&lt;/id&gt;
+    &lt;title xml:lang="en"&gt;Give me comments&lt;/title&gt;
+    &lt;summary xml:lang="en"&gt;&lt;/summary&gt;
+    &lt;wcm:name&gt;Give me comments&lt;/wcm:name&gt;
+    &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+    &lt;updated&gt;2020-10-12T20:04:40.428Z&lt;/updated&gt;
+    &lt;published&gt;2020-10-12T20:04:11.599Z&lt;/published&gt;
+    &lt;wcm:created&gt;2020-10-12T20:03:52.213Z&lt;/wcm:created&gt;
+...
+    &lt;wcm:workflow&gt;
+        &lt;wcm:publishDate&gt;2020-10-12T20:03:39.000Z&lt;/wcm:publishDate&gt;
+        &lt;wcm:expiryDate&gt;2020-10-12T20:04:34.000Z&lt;/wcm:expiryDate&gt;
+        &lt;wcm:workflowComments wcm:date="2020-10-12T20:04:11.560Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="Content is amazing - Approved!!!"/&gt;
+        &lt;wcm:workflowComments wcm:date="2020-10-12T20:04:34.551Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="Yeah on second thoughts maybe not that great. Retiring approved."/&gt;
+    &lt;/wcm:workflow&gt;
+...</code></p>
+</li>
+</ul>
+<h2 id="using-the-wcm-add-comment-api">Using the WCM Add Comment API</h2>
+<p>This API allows you to add a comment to an item (like content, content template, or others). Note that the item needs to be saved so a new version is created.</p>
+<p>There is no equivalent to the WCM Add Comment API functionality in the user interface.</p>
+<p>This API works similarly as the other APIs described on this page.</p>
+<ul>
+<li>
+<p><strong>Endpoint</strong></p>
+<p>POST request to:</p>
+<p><code>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;UUID of WCM item&gt;/comment</code></p>
+<p>Sample URL:</p>
+<p><code>http://localhost:10039/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/comment</code></p>
+</li>
+<li>
+<p><strong>Expected Body</strong></p>
+<p>See the section <a href="#workflow_comments_get">Workflow Comment</a> section for the structure on how to submit the comment.</p>
+<p>To ensure that comments are added to workflow stages that require comments, a GET request must be issued to the associated link. This returns an HTML form indicating whether a comment is required.</p>
+<p>To add the comment, you either submit the form or perform an HTTP POST request with the content type of text/plain.</p>
+</li>
+<li>
+<p><strong>Expected Headers</strong></p>
+<p>LTPA token of the user.</p>
+</li>
+<li>
+<p><strong>Query Parameters</strong></p>
+<p>None.</p>
+</li>
+<li>
+<p><strong>Limitations</strong></p>
+<p>None.</p>
+</li>
+<li>
+<p><strong>Return body:</strong></p>
+<p>The updated item.</p>
+<p>Sample:</p>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+    &lt;id&gt;wcmrest:11e7dded-f65a-426c-b865-d3bc18395ee0&lt;/id&gt;
+    &lt;title xml:lang="en"&gt;workflow&lt;/title&gt;
+    &lt;wcm:displayTitle xml:lang="en"&gt;workflow&lt;/wcm:displayTitle&gt;
+    &lt;wcm:titleTextProviderName&gt;com.ibm.workplace.wcm.services.textprovider.LocalizationContent&lt;/wcm:titleTextProviderName&gt;
+    &lt;wcm:titleTextProviderKey&gt;test&lt;/wcm:titleTextProviderKey&gt;
+    &lt;summary xml:lang="en"&gt;&lt;/summary&gt;
+    &lt;wcm:name&gt;workflow&lt;/wcm:name&gt;
+    &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+    &lt;updated&gt;2021-01-05T01:15:45.193Z&lt;/updated&gt;
+    &lt;published&gt;2021-01-04T22:15:09.803Z&lt;/published&gt;
+    &lt;wcm:created&gt;2021-01-04T22:10:48.981Z&lt;/wcm:created&gt;
+    &lt;author&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/um/users/profiles/Z9eAe23D2JOKC4BECMM47I9P8MMG6NHD6JM4CL9EAJM0763CIJI9CG1D43PKCH1&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;type&gt;USER&lt;/type&gt;
+    &lt;/author&gt;
+    &lt;wcm:owner&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/um/users/profiles/Z9eAe23D2JOKC4BECMM47I9P8MMG6NHD6JM4CL9EAJM0763CIJI9CG1D43PKCH1&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;type&gt;USER&lt;/type&gt;
+    &lt;/wcm:owner&gt;
+    &lt;wcm:lastModifier&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/um/users/profiles/Z9eAe23D2JOKC4BECMM47I9P8MMG6NHD6JM4CL9EAJM0763CIJI9CG1D43PKCH1&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;type&gt;USER&lt;/type&gt;
+    &lt;/wcm:lastModifier&gt;
+    &lt;wcm:creator&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/um/users/profiles/Z9eAe23D2JOKC4BECMM47I9P8MMG6NHD6JM4CL9EAJM0763CIJI9CG1D43PKCH1&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+        &lt;type&gt;USER&lt;/type&gt;
+    &lt;/wcm:creator&gt;
+    &lt;wcm:profile/&gt;
+    &lt;wcm:workflow&gt;
+        &lt;wcm:publishDate&gt;2021-01-04T22:10:48.000Z&lt;/wcm:publishDate&gt;
+        &lt;wcm:workflowComments wcm:date="2021-01-04T22:15:09.716Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="sdvsvbf" wcm:action="Moved by user wpsadmin - From stage Draft Stage to Publish Stage"/&gt;
+        &lt;wcm:workflowComments wcm:date="2021-01-04T22:35:22.476Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="testme22" wcm:action="Document updated by wpsadmin"/&gt;
+        &lt;wcm:workflowComments wcm:date="2021-01-04T22:42:34.215Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="testme33" wcm:action="Document updated by wpsadmin"/&gt;
+        &lt;wcm:workflowComments wcm:date="2021-01-05T01:13:48.176Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="testme33" wcm:action="Document updated by wpsadmin"/&gt;
+        &lt;wcm:workflowComments wcm:date="2021-01-05T01:13:54.314Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="testme33" wcm:action="Document updated by wpsadmin"/&gt;
+        &lt;wcm:workflowComments wcm:date="2021-01-05T01:15:45.181Z" wcm:commenter="uid=wpsadmin,o=defaultWIMFileBasedRealm" wcm:comment="Hello World" wcm:action="Document updated by wpsadmin"/&gt;
+    &lt;/wcm:workflow&gt;
+    &lt;link rel="self" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/Content/11e7dded-f65a-426c-b865-d3bc18395ee0" xml:lang="en" label="Read"/&gt;
+    &lt;link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/Content/11e7dded-f65a-426c-b865-d3bc18395ee0" xml:lang="en" label="Edit"/&gt;
+    &lt;link rel="delete" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/Content/11e7dded-f65a-426c-b865-d3bc18395ee0" xml:lang="en" label="Delete"/&gt;
+    &lt;link rel="workflow-stage" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/WorkflowStage/9d0df699-ef1b-424e-b85c-0b087381872b" xml:lang="en" label="Workflow Stage"/&gt;
+    &lt;link rel="expire" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/next-stage" xml:lang="en" label="Expire"/&gt;
+    &lt;link rel="next-stage" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/next-stage" xml:lang="en" label="Next Stage"/&gt;
+    &lt;link rel="workflow" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/Workflow/e1b4b02a-8632-46e5-b3e3-9bc5dca51565" xml:lang="en" label="Workflow"/&gt;
+    &lt;link rel="create-draft" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/create-draft" xml:lang="en" label="Create Draft"/&gt;
+    &lt;link rel="previous-stage" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/previous-stage" xml:lang="en" label="Previous Stage"/&gt;
+    &lt;link rel="restart" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/restart" xml:lang="en" label="Restart"/&gt;
+    &lt;link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/ac/access:oid:Z6QReDeH9CAMRGC4BP8MMOCM9D2MMG6IHD6MM8COHDAJMGCJHO6MO07J9EAJILCG1" xml:lang="en" label="Access Control"/&gt;
+    &lt;link rel="library" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/Library/bcc98adc-2382-4730-b669-6f3e423a1567" xml:lang="en" label="Library"/&gt;
+    &lt;link rel="parent" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/SiteArea/4dd55ede-5cb8-4ab1-9227-495b408834ba" xml:lang="en" label="Parent"/&gt;
+    &lt;link rel="versions" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/item/11e7dded-f65a-426c-b865-d3bc18395ee0/versions" xml:lang="en" label="Versions"/&gt;
+    &lt;link rel="preview" href="/wps/poc/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcm/oid:11e7dded-f65a-426c-b865-d3bc18395ee0" xml:lang="en" label="Preview"/&gt;
+    &lt;link rel="edit-media" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/Content/11e7dded-f65a-426c-b865-d3bc18395ee0" type="application/vnd.ibm.wcm+xml" xml:lang="en" label="Edit Media"/&gt;
+    &lt;link rel="content-template" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/ContentTemplate/82b00940-e22a-41c7-9292-a85bd51e5f85" xml:lang="en" label="Content Template"/&gt;
+    &lt;link rel="elements" href="/wps/mycontenthandler/!ut/p/digest!d0kIL5ON1sJd3Q8JsF2F9A/wcmrest/Content/11e7dded-f65a-426c-b865-d3bc18395ee0/elements" xml:lang="en" label="Elements"/&gt;
+    &lt;category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/&gt;
+    &lt;category scheme="wcmrest:favorite" term="false" xml:lang="en"/&gt;
+    &lt;category scheme="wcmrest:locked" term="true" label="uid=wpsadmin,o=defaultWIMFileBasedRealm"/&gt;
+    &lt;content type="application/vnd.ibm.wcm+xml"&gt;
+        &lt;wcm:content xmlns="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+            &lt;elements xmlns:atom="http://www.w3.org/2005/Atom"&gt;
+                &lt;element name="Body"&gt;
+                    &lt;title xml:lang="en"&gt;Body&lt;/title&gt;
+                    &lt;type&gt;RichTextComponent&lt;/type&gt;
+                    &lt;data type="text/html"/&gt;
+                &lt;/element&gt;
+            &lt;/elements&gt;
+        &lt;/wcm:content&gt;
+    &lt;/content&gt;
+&lt;/entry&gt;</code></p>
+</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+ 
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+    
+  </body>
+</html>

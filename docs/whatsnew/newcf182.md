@@ -6,11 +6,11 @@ Go to the [HCL Software Support Site](https://support.hcltechsw.com/csm?id=kb_a
 
 ## Deploy HCL DX 9.5 Container updates with minimal operations downtime
 
-This topic provides guidance to update artifacts in HCL Digital Experience 9.5 container deployments while minimizing operations downtime, and notes how processes and tools to support these efforts differ across Kubernetes container-based and non-Kubernetes HCL Digital Experience platform deployments. See [Deploying HCL DX 9.5 Container artifact updates with minimal operations downtime](../containerization/deploy_container_artifact_updates.html) for details.
+This topic provides guidance to update artifacts in HCL Digital Experience 9.5 container deployments while minimizing operations downtime, and notes how processes and tools to support these efforts differ across Kubernetes container-based and non-Kubernetes HCL Digital Experience platform deployments. See [Deploying HCL DX 9.5 Container artifact updates with minimal operations downtime](../containerization/deploy_container_artifact_updates.md) for details.
 
 ## Optional Digital Asset Management Storage Configuration Settings
 
-This topic outlines optional configuration steps to tune Digital Asset Management storage services Storage Class and Volume. See [Optional Digital Asset Management Storage Configuration Settings](../containerization/optional_digital_asset_management_storage_configuration_settings.html) for details.
+This topic outlines optional configuration steps to tune Digital Asset Management storage services Storage Class and Volume. See [Optional Digital Asset Management Storage Configuration Settings](../containerization/optional_digital_asset_management_storage_configuration_settings.md) for details.
 
 **Parent topic:**[Container Update releases 9.5](../overview/container_update_releases.md)
 

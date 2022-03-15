@@ -16,15 +16,15 @@ Many organizations are using cloud and containerized deployments as part of thei
 
 ## Prerequisites
 
--   HCL Digital Experience V9.5 CF19 or higher is deployed to supported on-premises platforms, in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../../9.5/install/deployment_patterns.html) topic for more information.
--   Practitioner Studio has been enabled in the Digital Experience 9.5 CF19 or higher installation. See the [How to enable Practitioner Studio](../../9.5/practitioner_studio/enable_prac_studio.html) topic for instructions.
+-   HCL Digital Experience V9.5 CF19 or higher is deployed to supported on-premises platforms, in a standalone, cluster, or farm topology. See the [Roadmaps to deploy your Digital Experience 9.5 system](../../9.5/install/deployment_patterns.md) topic for more information.
+-   Practitioner Studio has been enabled in the Digital Experience 9.5 CF19 or higher installation. See the [How to enable Practitioner Studio](../../9.5/practitioner_studio/enable_prac_studio.md) topic for instructions.
 -   A common domain, using an SSL connection, is established for both the on premise HCL DX 9.5 CF19 and higher on-premises environment, and the target Red Hat Open Shift platform deployment to contain cloud native components HCL DX Experience API, Digital Asset Management and Content Composer. For example, mytargetcloud.dx.com and myonprem.dx.com would have the same domain: dx.com.
 -   Single sign-on must be enabled on HCL DX 9.5 CF19 or higher on-premises environment. On DMGR or WAS Admin console under **Security** \> **Global Security** \> **Web & SIP Security** \> **Single Sign-On**, **Enabled** is checked and **Domain name** is set to common domain. For example, dx.com.
 -   A high-performance network connection is established between the HCL DX 9.5 CF19 and higher on-premises environment, and the target DX Red Hat Open Shift platform deployment.
 -   dxctl tool.
--   **Volume Requirement**: Requires an AccessMode of ReadWriteMany. Reference the [Storage Class and Volume](../../9.5/containerization/sample_storage_class_volume.html) topic for more information.
+-   **Volume Requirement**: Requires an AccessMode of ReadWriteMany. Reference the [Storage Class and Volume](../../9.5/containerization/sample_storage_class_volume.md) topic for more information.
 
-Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See the [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.html) topic for additional information.
+Ensure you have obtained a backup of the HCL DX 9.5 on-premises deployment. See the [Backup and Restore](../admin-system/i_wadm_c_bkup_restr_winlinux.md) topic for additional information.
 
 ## Enabling Hybrid Deployment support in the HCL Digital Experience 9.5 on-premises environment
 

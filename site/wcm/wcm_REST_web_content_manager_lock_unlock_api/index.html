@@ -1,0 +1,2397 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Web Content Manager Lock/Unlock API - HCL Digital Experience</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-content-manager-lockunlock-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="HCL Digital Experience" class="md-header__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            HCL Digital Experience
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Web Content Manager Lock/Unlock API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CWPdoc/dx-mkdocs/docs/
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/intr_new95/" class="md-tabs__link">
+        Overview
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../whatsnew/container_update_releases/" class="md-tabs__link">
+        What's new?
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../containerization/deployment/" class="md-tabs__link">
+        DX Cloud Native
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../dxtraditional" class="md-tabs__link">
+      DX Traditional
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-tabs__link">
+        Designing with DX
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="HCL Digital Experience" class="md-nav__button md-logo" aria-label="HCL Digital Experience" data-md-component="logo">
+      
+  <img src="../../assets/dx_logo.png" alt="logo">
+
+    </a>
+    HCL Digital Experience
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://pages.git.cwp.pnp-hcl.com/CWPdoc/dx-mkdocs/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CWPdoc/dx-mkdocs/docs/
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Overview" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Overview
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/intr_new95/" class="md-nav__link">
+        HCL Digital Experience 9.5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/intr_ovr/" class="md-nav__link">
+        Product capabilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          What's new?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="What's new?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          What's new?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/container_update_releases/" class="md-nav__link">
+        Cumulative Fixes for DX Containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          CF19
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CF19" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          CF19
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf201/" class="md-nav__link">
+        What's new in Container Update CF201?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf200/" class="md-nav__link">
+        What's new in Container Update CF200?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf199/" class="md-nav__link">
+        What's new in Container Update CF199?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf198/" class="md-nav__link">
+        What's new in Container Update CF198?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf197/" class="md-nav__link">
+        What's new in Container Update CF197?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf196/" class="md-nav__link">
+        What's new in Container Update CF196?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf195/" class="md-nav__link">
+        What's new in Container Update CF195?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf194/" class="md-nav__link">
+        What's new in Container Update CF194?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf193/" class="md-nav__link">
+        What's new in Container Update CF193?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf192/" class="md-nav__link">
+        What's new in Container Update CF192?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf191/" class="md-nav__link">
+        What's new in Container Update CF191?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf19/" class="md-nav__link">
+        What's new in Container Update CF19?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          CF18
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CF18" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          CF18
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf184/" class="md-nav__link">
+        What's new in Container Update CF184?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf183/" class="md-nav__link">
+        What's new in Container Update CF183?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/newcf182/" class="md-nav__link">
+        What's new in Container Update CF182?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf181/" class="md-nav__link">
+        What's new in Container Update CF181?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf18/" class="md-nav__link">
+        What's new in CF18?
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          CF17
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CF17" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          CF17
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf173/" class="md-nav__link">
+        What's new in Container Update CF173?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf172/" class="md-nav__link">
+        What's new in Container Update CF172?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf171/" class="md-nav__link">
+        What's new in Container Update CF171?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whatsnew/new_cf17/" class="md-nav__link">
+        What's new in CF17? 9.5
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          DX Cloud Native
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DX Cloud Native" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DX Cloud Native
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/deployment/" class="md-nav__link">
+        Digital Experience on containerized platforms
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/overview/" class="md-nav__link">
+        Containerization overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/c_kubesupportstatement/" class="md-nav__link">
+        Container platform support matrix
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Docker images
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docker images" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Docker images
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker_overview/" class="md-nav__link">
+        Digital Experience on Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker/" class="md-nav__link">
+        Docker image list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker_image_deployment/" class="md-nav__link">
+        Docker image deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/docker/docker_compose/" class="md-nav__link">
+        Docker image deployment using Docker Compose
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Deploying using Helm charts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deploying using Helm charts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Deploying using Helm charts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/helm/" class="md-nav__link">
+        Helm-based deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_2" type="checkbox" id="__nav_4_5_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_2">
+          DX Helm architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DX Helm architecture" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          DX Helm architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/helm_overview/" class="md-nav__link">
+        Overview of the Helm architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/core_interactions_kubernetes/" class="md-nav__link">
+        DX 9.5 Core Interactions with Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/deploy_applications_using_helm/" class="md-nav__link">
+        Deploying DX 9.5 applications to container platforms using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/persistent_volumes_helm/" class="md-nav__link">
+        PersistentVolumes and related operations considerations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/configure_deployment_helm/" class="md-nav__link">
+        Configuring DX 9.5 deployments to container platforms using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/container_scaling_helm/" class="md-nav__link">
+        Scaling DX 9.5 container deployments using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/dam_persistence_architecture/" class="md-nav__link">
+        Digital Asset Management persistence architecture
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/helm_deployment/" class="md-nav__link">
+        Deploying on containers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5_4" type="checkbox" id="__nav_4_5_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5_4">
+          Planning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Planning" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Planning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/docker/" class="md-nav__link">
+        Docker image list
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/limitations_requirements/" class="md-nav__link">
+        Containerization requirements and limitations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_planning_deployment/" class="md-nav__link">
+        Planning your container deployment using Helm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_persistent_volume_claims/" class="md-nav__link">
+        Configure PersistentVolumeClaims (PVCs)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_configure_networking/" class="md-nav__link">
+        Configure networking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../containerization/helm/planning/helm_additional_tasks/" class="md-nav__link">
+        Additional Helm tasks
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dxtraditional" class="md-nav__link">
+        DX Traditional
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Designing with DX
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Designing with DX" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Designing with DX
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Digital Asset Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Digital Asset Management" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Digital Asset Management
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_helm/" class="md-nav__link">
+        Restore Digital Asset Management image to previous version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/dam_restore_image_operator/" class="md-nav__link">
+        Restore Digital Asset Management image to previous version
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/digital_asset_mgmt_overview/" class="md-nav__link">
+        HCL Digital Asset Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/helm_dam_backup_restore_image/" class="md-nav__link">
+        Back up and restore a DAM image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/manage_collections/" class="md-nav__link">
+        Manage collections
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/digital_asset_mgmt/operator_dam_backup_restore_image/" class="md-nav__link">
+        Back up and restore a DAM image
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_2">
+          Practitioner Studio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Practitioner Studio" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Practitioner Studio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/practitioner_studio/enable_prac_studio/" class="md-nav__link">
+        How to enable Practitioner Studio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/practitioner_studio/practitionerstudio_overview/" class="md-nav__link">
+        Practitioner Studio
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/practitioner_studio/working_prac_studio/" class="md-nav__link">
+        Working with Practitioner Studio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Woodburn Studio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Woodburn Studio" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Woodburn Studio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../allnewfeatures/woodburn_studio/woodburn_studio/" class="md-nav__link">
+        The Woodburn Studio demo site
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-web-content-manager-lockunlock-api" class="md-nav__link">
+    Using the Web Content Manager Lock/Unlock API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retrieving-lockedunlocked-status" class="md-nav__link">
+    Retrieving locked/unlocked status
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asset-management-asset-or-web-content-manager-item-identified-by-its-uuid" class="md-nav__link">
+    Asset Management asset or Web Content Manager item identified by its UUID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-web-content-manager-reference-get-api" class="md-nav__link">
+    Using the Web Content Manager Reference GET API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-references" class="md-nav__link">
+    Updating references
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    Create
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-from-a-skeleton" class="md-nav__link">
+    Create from a skeleton
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="web-content-manager-lockunlock-api">Web Content Manager Lock/Unlock API</h1>
+<p>The Web Content Manager Lock/Unlock API lets you lock and unlock WCM content components, authoring templates, and item.</p>
+<p>It also extends the <a href="../wcm_rest_query/">WCM Query API</a> to pass on the information if an item is locked and who locked it.</p>
+<p>It is equivalent to the functionality in the user interface (for WCM items):</p>
+<p><img alt="" src="../../assets/HCL_Web_Content_Manager_Lock_Unlock_API.png" title="Enable WCM Lock/Unlock API" /></p>
+<h2 id="using-the-web-content-manager-lockunlock-api">Using the Web Content Manager Lock/Unlock API</h2>
+<ul>
+<li>
+<p><strong>Endpoint</strong></p>
+<p><strong>POST request to:</strong></p>
+<p>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;UUID of WCM item>/lock or</p>
+<p>http://host:port/wps/mycontenthandler/wcmrest/item/&lt;UUID of WCM item>/unlock</p>
+<p><strong>JSON:</strong></p>
+<p>For JSON add ?mime-type=application/json</p>
+<p><strong>Sample URL:</strong></p>
+<p>localhost:10039/wps/mycontenthandler/wcmrest/item/02d62efb-54ed-430d-9f67-01d8788cb6d6/lock</p>
+</li>
+<li>
+<p><strong>Expected Body</strong></p>
+<p>The body can have the basic WCM structure:</p>
+<p>```
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+</feed></p>
+<p>```</p>
+</li>
+<li>
+<p><strong>Expected Headers</strong></p>
+<p>LTPA token of the user.</p>
+</li>
+<li>
+<p><strong>Query Parameters</strong></p>
+<p>None.</p>
+</li>
+<li>
+<p><strong>Limitations</strong></p>
+<p>None.</p>
+</li>
+<li>
+<p><strong>Return Body</strong></p>
+<p>The updated item.</p>
+<p>Sample:</p>
+<p>```
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+    <id>wcmrest:02d62efb-54ed-430d-9f67-01d8788cb6d6</id>
+    <title xml:lang="en">test</title>
+    <summary xml:lang="en"></summary>
+    <wcm:name>test</wcm:name>
+    <wcm:type>Content</wcm:type>
+    <updated>2020-07-21T01:10:03.736Z</updated>
+    <wcm:created>2020-07-04T18:26:26.956Z</wcm:created>
+    <author>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/um/users/profiles/Z9eAe1RO8MROCP9PEJMG633CCMMG6JHP6JM07HHPEJMS6KPC4JGD6J9C63HLC13</uri>
+        <name>wpsadmin</name>
+    </author>
+    <wcm:owner>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/um/users/profiles/Z9eAe1RO8MROCP9PEJMG633CCMMG6JHP6JM07HHPEJMS6KPC4JGD6J9C63HLC13</uri>
+        <name>wpsadmin</name>
+    </wcm:owner>
+    <wcm:lastModifier>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/um/users/profiles/Z9eAe1RO8MROCP9PEJMG633CCMMG6JHP6JM07HHPEJMS6KPC4JGD6J9C63HLC13</uri>
+        <name>wpsadmin</name>
+    </wcm:lastModifier>
+    <wcm:creator>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/um/users/profiles/Z9eAe1RO8MROCP9PEJMG633CCMMG6JHP6JM07HHPEJMS6KPC4JGD6J9C63HLC13</uri>
+        <name>wpsadmin</name>
+    </wcm:creator>
+    <wcm:profile/>
+    <link rel="self" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/Content/02d62efb-54ed-430d-9f67-01d8788cb6d6" xml:lang="en" label="Read"/>
+    <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/Content/02d62efb-54ed-430d-9f67-01d8788cb6d6" xml:lang="en" label="Edit"/>
+    <link rel="delete" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/Content/02d62efb-54ed-430d-9f67-01d8788cb6d6" xml:lang="en" label="Delete"/>
+    <link rel="change-to-draft" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/item/02d62efb-54ed-430d-9f67-01d8788cb6d6/change-to-draft" xml:lang="en" label="Change To Draft"/>
+    <link rel="create-draft" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/item/02d62efb-54ed-430d-9f67-01d8788cb6d6/create-draft" xml:lang="en" label="Create Draft"/>
+    <link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/ac/access:oid:Z6QReDeGHC86R865JP4MMK6K9P8MMG6J1C8MM476JDEJM06H1PGJR07OPO46RGCM1" xml:lang="en" label="Access Control"/>
+    <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/Library/08929add-f917-4da6-996b-c1b40e436666" xml:lang="en" label="Library"/>
+    <link rel="parent" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/SiteArea/c85aea10-bbb1-4433-be93-c92f2a8caeb1" xml:lang="en" label="Parent"/>
+    <link rel="versions" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/item/02d62efb-54ed-430d-9f67-01d8788cb6d6/versions" xml:lang="en" label="Versions"/>
+    <link rel="preview" href="/wps/poc/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcm/oid:02d62efb-54ed-430d-9f67-01d8788cb6d6" xml:lang="en" label="Preview"/>
+    <link rel="edit-media" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/Content/02d62efb-54ed-430d-9f67-01d8788cb6d6" type="application/vnd.ibm.wcm+xml" xml:lang="en" label="Edit Media"/>
+    <link rel="content-template" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/ContentTemplate/e27baf4d-42be-4a03-8e75-20bfab6146e5" xml:lang="en" label="Content Template"/>
+    <link rel="elements" href="/wps/mycontenthandler/!ut/p/digest!MkdRgjTjAwea4NMtxVBQGg/wcmrest/Content/02d62efb-54ed-430d-9f67-01d8788cb6d6/elements" xml:lang="en" label="Elements"/>
+    <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    <category scheme="wcmrest:favorite" term="false" xml:lang="en"/>
+    <category scheme="wcmrest:locked" term="true" label="uid=wpsadmin,o=defaultWIMFileBasedRealm"/>
+    <content type="application/vnd.ibm.wcm+xml">
+        <wcm:content xmlns="http://www.ibm.com/xmlns/wcm/8.0">
+            <elements xmlns:atom="http://www.w3.org/2005/Atom">
+                <element name="image">
+                    <title xml:lang="en">image</title>
+                    <type>ImageComponent</type>
+                    <data type="application/vnd.ibm.wcm+xml">
+                        <image>
+                            <dimension height="" width="" border="0"/>
+                            <altText></altText>
+                            <tagName></tagName>
+                            <fileName>IMG_0001.jpg</fileName>
+                            <resourceUri type="image/jpeg">http://us-latest.team-q-dev.com:3000/dx/api/dam/v1/collections/6116616b-93e3-4de9-b316-f6e5c13a9621/items/b1489ff2-f466-4ee1-a6a5-aade5af64a2c/renditions/d6557d8b-c684-4f1c-973f-bf6d8a38a2ff?binary=true</resourceUri>
+                        </image>
+                    </data>
+                </element>
+            </elements>
+        </wcm:content>
+    </content>
+</entry></p>
+<p>```</p>
+</li>
+</ul>
+<h2 id="retrieving-lockedunlocked-status">Retrieving locked/unlocked status</h2>
+<p>The Web Content Manager Item API as indicated above has the new category field for locked/unlocked status.</p>
+<ul>
+<li>
+<p><strong>Structure</strong></p>
+<p>Unlocked:</p>
+<p><code>&lt;category scheme="wcmrest:locked" term="false" label=""/&gt;</code></p>
+<p>Locked:</p>
+<p><code>&lt;category scheme="wcmrest:locked" term="true" label="uid=wpsadmin,o=defaultWIMFileBasedRealm"/</code></p>
+</li>
+</ul>
+<p>When using search when specifying the options=details query parameter the category is also retrieved and added to the REST result feed.</p>
+<ul>
+<li>
+<p><strong>Delete</strong></p>
+<p>A content item can be deleted by sending a DELETE request to the following URI: /Content/item-uuid</p>
+<p>For example:</p>
+<p><strong>DELETE:</strong></p>
+<p><code>HTTP/1.1 DELETE
+http://host:port/wps/mycontenthandler/wcmrest/Content/fa2bfd32-7b2f-4394-a5ab-2e150c5ed8aa/</code></p>
+<p><strong>Response:</strong></p>
+<p><code>200 OK</code></p>
+</li>
+</ul>
+<h2 id="asset-management-asset-or-web-content-manager-item-identified-by-its-uuid">Asset Management asset or Web Content Manager item identified by its UUID</h2>
+<p>It is equivalent to the functionality in the user interface (for finding Web Content Manager items).</p>
+<p><img alt="" src="../../assets/HCL_Web_Content_Manager_Reference_API_UI.png" title="WCM Reference API UI" /></p>
+<p><strong>Note:</strong> Currently, the Web Content Manager Reference API only supports the GET operation for retrieving items. To update items, the document outlines how to use existing APIs to make updates.</p>
+<h2 id="using-the-web-content-manager-reference-get-api">Using the Web Content Manager Reference GET API</h2>
+<ul>
+<li>
+<p><strong>Endpoint</strong></p>
+<p><strong>GET</strong></p>
+<p>http://host:port/wps/mycontenthandler/wcmrest/references/wcm/&lt;UUID of WCM item></p>
+<p>http://host:port/wps/mycontenthandler/wcmrest/references/wcm/&lt;UUID of WCM item></p>
+<p><strong>JSON</strong></p>
+<p>For JSON, add ?mime-type=application/json</p>
+<p>Sample URL:</p>
+<p>http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c</p>
+<p>Sample URL JSON:</p>
+<p>http://samplehost.com:10039/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/references/wcm/3d464f55-d909-41dd-b760-57667ddd290c?mime-type=application/json</p>
+</li>
+<li>
+<p><strong>Expected Body</strong></p>
+<p>The body can just have the basic WCM structure:</p>
+<p><strong>BODY</strong></p>
+<p><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0"&gt;
+&lt;/feed&gt;</code></p>
+</li>
+<li>
+<p><strong>Expected Headers</strong></p>
+<p>LTPA token of the user. Also works anonymously.</p>
+</li>
+<li>
+<p><strong>Query Parameters</strong></p>
+<p>None.</p>
+</li>
+<li>
+<p><strong>Limitations</strong></p>
+<p>Currently, Digital Asset Management (DAM) UUID references for elements and components are found – but items are not retrieved from within Rich Text. Retrieval of UUID items in Rich Text will be supported in a later update.</p>
+</li>
+<li>
+<p><strong>Return Body</strong></p>
+<p>The found/retrieved results.</p>
+<p>Sample:</p>
+<p>```
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;<feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+    <id>wcmrest:Project/3d464f55-d909-41dd-b760-57667ddd290c/project-items</id>
+    <title>wcmrest:Project/3d464f55-d909-41dd-b760-57667ddd290c/project-items</title>
+    <updated>2020-04-24T15:59:54.529Z</updated>
+    <total>5</total>
+    <entry>
+        <id>wcmrest:10c4700e-b25d-4609-875a-62bfdb557c88</id>
+        <title xml:lang="en">Articles</title>
+        <wcm:displayTitle xml:lang="en">Articles</wcm:displayTitle>
+        <summary xml:lang="en"></summary>
+        <wcm:name>Articles</wcm:name>
+        <wcm:type>SiteArea</wcm:type>
+        <updated>2020-04-23T19:18:35.462Z</updated>
+        <wcm:lastModifier>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/um/users/profiles/Z9eAeO1E2MPKCIPC2MMK6HHOCJMG63BOAMM4CK9OAMMKCMPCAMPC61BOE3SC653</uri>
+            <name>wpsadmin</name>
+        </wcm:lastModifier>
+        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/SiteArea/10c4700e-b25d-4609-875a-62bfdb557c88" xml:lang="en" label="Edit"/>
+        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/SiteArea/10c4700e-b25d-4609-875a-62bfdb557c88" xml:lang="en" label="Read"/>
+        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Library/1c9bc3d5-9cb3-46ac-b489-85846a76c05b" xml:lang="en" label="Library"/>
+        <link rel="preview" href="/wps/poc/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcm/oid:10c4700e-b25d-4609-875a-62bfdb557c88" xml:lang="en" label="Preview"/>
+        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    </entry>
+    <entry>
+        <id>wcmrest:fb6ea2bd-47e2-4b2c-8e16-48aeff35eb4e</id>
+        <title xml:lang="en">Sample Article</title>
+        <wcm:displayTitle xml:lang="en">Sample Article</wcm:displayTitle>
+        <summary xml:lang="en"></summary>
+        <wcm:name>Sample Article</wcm:name>
+        <wcm:type>Content</wcm:type>
+        <updated>2020-04-23T19:18:35.462Z</updated>
+        <wcm:lastModifier>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/um/users/profiles/Z9eAeO1E2MPKCIPC2MMK6HHOCJMG63BOAMM4CK9OAMMKCMPCAMPC61BOE3SC653</uri>
+            <name>wpsadmin</name>
+        </wcm:lastModifier>
+        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Content/fb6ea2bd-47e2-4b2c-8e16-48aeff35eb4e" xml:lang="en" label="Edit"/>
+        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Content/fb6ea2bd-47e2-4b2c-8e16-48aeff35eb4e" xml:lang="en" label="Read"/>
+        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Library/1c9bc3d5-9cb3-46ac-b489-85846a76c05b" xml:lang="en" label="Library"/>
+        <link rel="preview" href="/wps/poc/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcm/oid:fb6ea2bd-47e2-4b2c-8e16-48aeff35eb4e" xml:lang="en" label="Preview"/>
+        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    </entry>
+    <entry>
+        <id>wcmrest:4039c2b7-3fa6-4026-a2ed-f6320ee1f6d9</id>
+        <title xml:lang="en">Sample Article 2</title>
+        <wcm:displayTitle xml:lang="en">Sample Article 2</wcm:displayTitle>
+        <summary xml:lang="en"></summary>
+        <wcm:name>Sample Article 2</wcm:name>
+        <wcm:type>Content</wcm:type>
+        <updated>2020-04-23T19:18:35.463Z</updated>
+        <wcm:lastModifier>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/um/users/profiles/Z9eAeO1E2MPKCIPC2MMK6HHOCJMG63BOAMM4CK9OAMMKCMPCAMPC61BOE3SC653</uri>
+            <name>wpsadmin</name>
+        </wcm:lastModifier>
+        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Content/4039c2b7-3fa6-4026-a2ed-f6320ee1f6d9" xml:lang="en" label="Edit"/>
+        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Content/4039c2b7-3fa6-4026-a2ed-f6320ee1f6d9" xml:lang="en" label="Read"/>
+        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Library/1c9bc3d5-9cb3-46ac-b489-85846a76c05b" xml:lang="en" label="Library"/>
+        <link rel="preview" href="/wps/poc/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcm/oid:4039c2b7-3fa6-4026-a2ed-f6320ee1f6d9" xml:lang="en" label="Preview"/>
+        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    </entry>
+    <entry>
+        <id>wcmrest:fa77c56b-6af7-4491-bc4e-7b464c3832a3</id>
+        <title xml:lang="en">Articles List</title>
+        <wcm:displayTitle xml:lang="en">Articles List</wcm:displayTitle>
+        <summary xml:lang="en"></summary>
+        <wcm:name>Articles List</wcm:name>
+        <wcm:type>LibraryMenuComponent</wcm:type>
+        <updated>2020-04-23T19:18:35.462Z</updated>
+        <wcm:lastModifier>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/um/users/profiles/Z9eAeO1E2MPKCIPC2MMK6HHOCJMG63BOAMM4CK9OAMMKCMPCAMPC61BOE3SC653</uri>
+            <name>wpsadmin</name>
+        </wcm:lastModifier>
+        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/LibraryMenuComponent/fa77c56b-6af7-4491-bc4e-7b464c3832a3" xml:lang="en" label="Edit"/>
+        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/LibraryMenuComponent/fa77c56b-6af7-4491-bc4e-7b464c3832a3" xml:lang="en" label="Read"/>
+        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Library/1c9bc3d5-9cb3-46ac-b489-85846a76c05b" xml:lang="en" label="Library"/>
+        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    </entry>
+    <entry>
+        <id>wcmrest:84efffc2-67fa-403c-b977-8ad74f81390a</id>
+        <title xml:lang="en">Article Toolbar</title>
+        <wcm:displayTitle xml:lang="en">Article Toolbar</wcm:displayTitle>
+        <summary xml:lang="en"></summary>
+        <wcm:name>Article toolbar</wcm:name>
+        <wcm:type>LibraryAuthoringToolsComponent</wcm:type>
+        <updated>2020-04-23T19:18:35.462Z</updated>
+        <wcm:lastModifier>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/um/users/profiles/Z9eAeO1E2MPKCIPC2MMK6HHOCJMG63BOAMM4CK9OAMMKCMPCAMPC61BOE3SC653</uri>
+            <name>wpsadmin</name>
+        </wcm:lastModifier>
+        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/LibraryAuthoringToolsComponent/84efffc2-67fa-403c-b977-8ad74f81390a" xml:lang="en" label="Edit"/>
+        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/LibraryAuthoringToolsComponent/84efffc2-67fa-403c-b977-8ad74f81390a" xml:lang="en" label="Read"/>
+        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!DEqoG-vlJYym_KoW9OQbyw/wcmrest/Library/1c9bc3d5-9cb3-46ac-b489-85846a76c05b" xml:lang="en" label="Library"/>
+        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    </entry>
+</feed></p>
+<p>```</p>
+</li>
+</ul>
+<h2 id="updating-references">Updating references</h2>
+<p>Both Digital Asset Management and Web Content Manager references can be updated with the published APIs as documented here: <a href="../wcm/wcm_rest_crud_component.md">How to use REST with components</a>.</p>
+<p>Example for Digital Asset Management, to retrieve references to UUID: 7e3cb713-251a-485c-a578-1aa219411b5e.</p>
+<ul>
+<li>
+<p><strong>Response:</strong></p>
+<p>```
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;<feed xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+    <id>wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items</id>
+    <title>wcmrest:Project/7e3cb713-251a-485c-a578-1aa219411b5e/project-items</title>
+    <updated>2020-05-11T15:59:18.639Z</updated>
+    <total>1</total>
+    <entry>
+        <id>wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f</id>
+        <title xml:lang="en">testmeout</title>
+        <summary xml:lang="en"></summary>
+        <wcm:name>testmeout</wcm:name>
+        <wcm:type>Content</wcm:type>
+        <updated>2020-05-11T15:52:39.290Z</updated>
+        <author>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+            <name>wpsadmin</name>
+        </author>
+        <wcm:lastModifier>
+            <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+            <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+            <name>wpsadmin</name>
+        </wcm:lastModifier>
+        <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Edit"/>
+        <link rel="alternate" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Read"/>
+        <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Library/f7e965b1-c9e4-4c07-a0e0-de8efb5faf2a" xml:lang="en" label="Library"/>
+        <link rel="preview" href="/wps/poc/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcm/oid:43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Preview"/>
+        <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    </entry>
+</feed></p>
+<p>```</p>
+</li>
+</ul>
+<p>Iterating over the results will use the edit link to fetch the item:</p>
+<ul>
+<li>
+<p><strong>GET:</strong></p>
+<p>```
+/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;<entry xmlns="http://www.w3.org/2005/Atom" xmlns:wcm="http://www.ibm.com/xmlns/wcm/8.0">
+    <id>wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f</id>
+    <title xml:lang="en">testmeout</title>
+    <summary xml:lang="en"></summary>
+    <wcm:name>testmeout</wcm:name>
+    <wcm:type>Content</wcm:type>
+    <updated>2020-05-11T15:52:39.290Z</updated>
+    <wcm:created>2020-05-11T15:51:52.513Z</wcm:created>
+    <author>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+        <name>wpsadmin</name>
+    </author>
+    <wcm:owner>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+        <name>wpsadmin</name>
+    </wcm:owner>
+    <wcm:lastModifier>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+        <name>wpsadmin</name>
+    </wcm:lastModifier>
+    <wcm:creator>
+        <wcm:distinguishedName>uid=wpsadmin,o=defaultWIMFileBasedRealm</wcm:distinguishedName>
+        <uri>/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53</uri>
+        <name>wpsadmin</name>
+    </wcm:creator>
+    <wcm:profile/>
+    <link rel="self" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Read"/>
+    <link rel="edit" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Edit"/>
+    <link rel="delete" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Delete"/>
+    <link rel="create-draft" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/create-draft" xml:lang="en" label="Create Draft"/>
+    <link rel="change-to-draft" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/change-to-draft" xml:lang="en" label="Change To Draft"/>
+    <link rel="access-control" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/ac/access:oid:Z6QReDeKPC2JRG6G1E2JMG663EGJMG6JHD2MM4COPD4MM46M9PCJPS6LPO4JI1763" xml:lang="en" label="Access Control"/>
+    <link rel="library" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Library/f7e965b1-c9e4-4c07-a0e0-de8efb5faf2a" xml:lang="en" label="Library"/>
+    <link rel="parent" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/SiteArea/bf117c51-d2ab-4818-b2de-02e6988fe9ad" xml:lang="en" label="Parent"/>
+    <link rel="versions" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/versions" xml:lang="en" label="Versions"/>
+    <link rel="preview" href="/wps/poc/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcm/oid:43174081-4f88-436a-a87b-16e6375c2e8f" xml:lang="en" label="Preview"/>
+    <link rel="edit-media" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f" type="application/vnd.ibm.wcm+xml" xml:lang="en" label="Edit Media"/>
+    <link rel="content-template" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/ContentTemplate/c7abf2c0-7eff-4396-90e5-943a096c5ab3" xml:lang="en" label="Content Template"/>
+    <link rel="elements" href="/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f/elements" xml:lang="en" label="Elements"/>
+    <category scheme="wcmrest:workflowState" term="PUBLISHED" label="Published" xml:lang="en"/>
+    <category scheme="wcmrest:favorite" term="false" xml:lang="en"/>
+    <content type="application/vnd.ibm.wcm+xml">
+        <wcm:content xmlns="http://www.ibm.com/xmlns/wcm/8.0">
+            <elements xmlns:atom="http://www.w3.org/2005/Atom">
+                <element name="test">
+                    <title xml:lang="en">test</title>
+                    <type>ImageComponent</type>
+                    <data type="application/vnd.ibm.wcm+xml">
+                        <image>
+                            <dimension height="" width="" border="0"/>
+                            <altText></altText>
+                            <tagName></tagName>
+                            <fileName>Screen Shot 2020-05-07 at 10.26.24 AM.png</fileName>
+                            <resourceUri type="image/png">http://samplehost.com:3000/dx/api/dam/v0/collections/48839939-375e-4f07-a85d-56d13ddba3c8/items/7e3cb713-251a-485c-a578-1aa219411b5e?binary=true</resourceUri>
+                        </image>
+                    </data>
+                </element>
+            </elements>
+        </wcm:content>
+    </content>
+</entry></p>
+<p>```</p>
+</li>
+</ul>
+<p>To send an update to the item to replace the resourceUri and add fileName and type:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+    &lt;id&gt;wcmrest:43174081-4f88-436a-a87b-16e6375c2e8f&lt;/id&gt;
+    &lt;title xml:lang=&quot;en&quot;&gt;testmeout&lt;/title&gt;
+    &lt;summary xml:lang=&quot;en&quot;&gt;&lt;/summary&gt;
+    &lt;wcm:name&gt;testmeout&lt;/wcm:name&gt;
+    &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+    &lt;updated&gt;2020-05-11T15:52:39.290Z&lt;/updated&gt;
+    &lt;wcm:created&gt;2020-05-11T15:51:52.513Z&lt;/wcm:created&gt;
+    &lt;author&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+    &lt;/author&gt;
+    &lt;wcm:owner&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+    &lt;/wcm:owner&gt;
+    &lt;wcm:lastModifier&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+    &lt;/wcm:lastModifier&gt;
+    &lt;wcm:creator&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/um/users/profiles/Z9eAeHPOG3SG6HHC2JMOCG1P8MMG6OPO4JM47JHDAJM076RDG3RGCN1C66SOC53&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+    &lt;/wcm:creator&gt;
+    &lt;wcm:profile/&gt;
+    &lt;link rel=&quot;self&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f&quot; xml:lang=&quot;en&quot; label=&quot;Read&quot;/&gt;
+    &lt;link rel=&quot;edit&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f&quot; xml:lang=&quot;en&quot; label=&quot;Edit&quot;/&gt;
+    &lt;link rel=&quot;delete&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f&quot; xml:lang=&quot;en&quot; label=&quot;Delete&quot;/&gt;
+    &lt;link rel=&quot;create-draft&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/create-draft&quot; xml:lang=&quot;en&quot; label=&quot;Create Draft&quot;/&gt;
+    &lt;link rel=&quot;change-to-draft&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/change-to-draft&quot; xml:lang=&quot;en&quot; label=&quot;Change To Draft&quot;/&gt;
+    &lt;link rel=&quot;access-control&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/ac/access:oid:Z6QReDeKPC2JRG6G1E2JMG663EGJMG6JHD2MM4COPD4MM46M9PCJPS6LPO4JI1763&quot; xml:lang=&quot;en&quot; label=&quot;Access Control&quot;/&gt;
+    &lt;link rel=&quot;library&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Library/f7e965b1-c9e4-4c07-a0e0-de8efb5faf2a&quot; xml:lang=&quot;en&quot; label=&quot;Library&quot;/&gt;
+    &lt;link rel=&quot;parent&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/SiteArea/bf117c51-d2ab-4818-b2de-02e6988fe9ad&quot; xml:lang=&quot;en&quot; label=&quot;Parent&quot;/&gt;
+    &lt;link rel=&quot;versions&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/item/43174081-4f88-436a-a87b-16e6375c2e8f/versions&quot; xml:lang=&quot;en&quot; label=&quot;Versions&quot;/&gt;
+    &lt;link rel=&quot;preview&quot; href=&quot;/wps/poc/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcm/oid:43174081-4f88-436a-a87b-16e6375c2e8f&quot; xml:lang=&quot;en&quot; label=&quot;Preview&quot;/&gt;
+    &lt;link rel=&quot;edit-media&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f&quot; type=&quot;application/vnd.ibm.wcm+xml&quot; xml:lang=&quot;en&quot; label=&quot;Edit Media&quot;/&gt;
+    &lt;link rel=&quot;content-template&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/ContentTemplate/c7abf2c0-7eff-4396-90e5-943a096c5ab3&quot; xml:lang=&quot;en&quot; label=&quot;Content Template&quot;/&gt;
+    &lt;link rel=&quot;elements&quot; href=&quot;/wps/mycontenthandler/!ut/p/digest!HttiyBvTxv1fgs63hc74Pw/wcmrest/Content/43174081-4f88-436a-a87b-16e6375c2e8f/elements&quot; xml:lang=&quot;en&quot; label=&quot;Elements&quot;/&gt;
+    &lt;category scheme=&quot;wcmrest:workflowState&quot; term=&quot;PUBLISHED&quot; label=&quot;Published&quot; xml:lang=&quot;en&quot;/&gt;
+    &lt;category scheme=&quot;wcmrest:favorite&quot; term=&quot;false&quot; xml:lang=&quot;en&quot;/&gt;
+    &lt;content type=&quot;application/vnd.ibm.wcm+xml&quot;&gt;
+        &lt;wcm:content xmlns=&quot;http://www.ibm.com/xmlns/wcm/8.0&quot;&gt;
+            &lt;elements xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+                &lt;element name=&quot;test&quot;&gt;
+                    &lt;title xml:lang=&quot;en&quot;&gt;test&lt;/title&gt;
+                    &lt;type&gt;ImageComponent&lt;/type&gt;
+                    &lt;data type=&quot;application/vnd.ibm.wcm+xml&quot;&gt;
+                        &lt;image&gt;
+                            &lt;dimension height=&quot;&quot; width=&quot;&quot; border=&quot;0&quot;/&gt;
+                            &lt;altText&gt;&lt;/altText&gt;
+                            &lt;tagName&gt;&lt;/tagName&gt;
+                            &lt;fileName&gt;Screen Shot 2020-05-07 at 10.26.24 AM.png&lt;/fileName&gt;
+                            &lt;resourceUri type=&quot;image/png&quot;&gt;http://samplehost.com:3000/dx/api/dam/v0/collections/48839939-375e-4f07-a85d-56d13ddba3c8/items/7e3cb713-251a-485c-a578-1aa219411b5e?binary=true&lt;/resourceUri&gt;
+                        &lt;/image&gt;
+                    &lt;/data&gt;
+                &lt;/element&gt;
+            &lt;/elements&gt;
+        &lt;/wcm:content&gt;
+    &lt;/content&gt;
+&lt;/entry&gt;
+
+</code></pre>
+<h2 id="create">Create</h2>
+<p>A content item can be created by sending a POST request to the following URI with an Atom entry used to represent the content item:</p>
+<pre><code>/Content
+</code></pre>
+<ul>
+<li>A library or parent link relation must be used to define the location of the hierarchical item that is being created. </li>
+<li>An authoring template must be specified to set what authoring template to use when the item is created.</li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>
+<p><strong>POST:</strong></p>
+<p>```
+HTTP/1.1 POST 
+http://host:port/wps/mycontenthandler/wcmrest/Content/
+Content-Type: application/atom+xml
+        <atom:entry xmlns:atom="http://www.w3.org/2005/Atom" xmlns:wcm="wcm/namespace">
+            <wcm:name>Content Name</wcm:name>
+            <atom:title>Content Title</atom:title>
+            <atom:link atom:rel="parent" atom:href="/wps/
+            mycontenthandler/wcmrest/item/49f4ed95-a99f-434c-a415-77c341fa4893"/>
+            <atom:link atom:rel="workflow" atom:href="/wps/
+            mycontenthandler/wcmrest/item/abae799b-4cca-47ae-aad8-b3d8204deefb"/>
+            <atom:link atom:rel="content-template" atom:href="/wps/
+            mycontenthandler/wcmrest/item/588127d0-a4f8-44b5-87a4-5fe3f7bd3da7"/>
+        </atom:entry></p>
+<p>```</p>
+</li>
+<li>
+<p><strong>Response:</strong></p>
+<p><code>201 Created</code></p>
+</li>
+</ul>
+<h2 id="create-from-a-skeleton">Create from a skeleton</h2>
+<p>A "skeleton" representation of a content item that is created from a content template can be obtained to aid in the creation of content items. This can be obtained by using a GET request to the following URI. When the skeleton is obtained and completed a POST request can be made by using this data to create the item: /ContentTemplate/template-uuid/new-content.</p>
+<p>For example:</p>
+<pre><code>HTTP/1.1 GET http://host:port/wps/mycontenthandler/wcmrest/ContentTemplate/b7b8b3fb-8fa1-4eb3-915e-ce7514f7067f/new-content
+
+Response 
+200 OK
+
+</code></pre>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;entry xmlns=&quot;http://www.w3.org/2005/Atom&quot; xmlns:wcm=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
+    &lt;id&gt;wcmrest:6bab48c6-1f24-454e-9bab-ae1be4cf3a0a&lt;/id&gt;
+    &lt;title lang=&quot;en&quot;&gt;&lt;/title&gt;
+    &lt;summary lang=&quot;en&quot;&gt;&lt;/summary&gt;
+    &lt;wcm:name&gt;&lt;/wcm:name&gt;
+    &lt;wcm:type&gt;Content&lt;/wcm:type&gt;
+    &lt;updated&gt;2012-01-31T03:28:08.118Z&lt;/updated&gt;
+    &lt;author&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/
+    wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!7K1PhYjxBw0jzCDqHCwg2w/um/
+    users/profiles/Z9eAeHPCAJG963RD2MMG6P9O6MMG66BD6MM47IHP4MMS6M1DAJQ4C1BCAMID653&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+    &lt;/author&gt;
+    &lt;wcm:owner&gt;
+        &lt;wcm:distinguishedName&gt;uid=wpsadmin,o=defaultWIMFileBasedRealm&lt;/wcm:distinguishedName&gt;
+        &lt;uri&gt;/wps/mycontenthandler/!ut/p/digest!7K1PhYjxBw0jzCDqHCwg2w/um/
+    users/profiles/Z9eAeHPCAJG963RD2MMG6P9O6MMG66BD6MM47IHP4MMS6M1DAJQ4C1BCAMID653&lt;/uri&gt;
+        &lt;name&gt;wpsadmin&lt;/name&gt;
+    &lt;/wcm:owner&gt;
+    &lt;link label=&quot;Library&quot; rel=&quot;library&quot; href=&quot;/wps/mycontenthandler/!ut/p/
+digest!PQo5Yhy68oeppWcEz2sddA/wcmrest/item/a423287f-b0ce-4ee3-9c95-aa0939382228&quot; lang=&quot;en&quot;/&gt;
+    &lt;link label=&quot;Content Template&quot; rel=&quot;content-template&quot; href=&quot;/wps/
+mycontenthandler/!ut/p/digest!PQo5Yhy68oeppWcEz2sddA/wcmrest/Content/b7b8b3fb-8fa1-4eb3-915e-ce7514f7067f&quot; lang=&quot;en&quot;/&gt;
+    &lt;content type=&quot;application/vnd.ibm.wcm+xml&quot;&gt;
+        &lt;content xmlns=&quot;http://www.ibm.com/xmlns/wcm&quot;&gt;
+            &lt;elements&gt;
+                &lt;element name=&quot;Body&quot;&gt;
+                    &lt;title lang=&quot;en&quot;&gt;Body&lt;/title&gt;
+                    &lt;type&gt;RichTextComponent&lt;/type&gt;
+
+</code></pre>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+ 
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.indexes", "navigation.top", "navigation.instant", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+    
+  </body>
+</html>

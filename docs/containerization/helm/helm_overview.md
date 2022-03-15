@@ -12,7 +12,7 @@ Helm is a tool for managing Kubernetes applications and deployments. It allows f
 
 In addition to foundation packaging and installation capabilities, Helm can also be used to modify and upgrade existing deployments, if the Helm Charts are built to support this. Configuration changes and application upgrades can both be managed using Helm.
 
-For more information about Helm, please reference documentation available on Helm topics for Red Hat [Red Hat OpenShift](https://docs.openshift.com/container-platform/4.7/cli_reference/helm_cli/getting-started-with-helm-on-openshift-container-platform.html) and [Kubernetes](https://helm.sh/) container platforms.
+For more information about Helm, please reference documentation available on Helm topics for Red Hat [Red Hat OpenShift](https://docs.openshift.com/container-platform/4.7/cli_reference/helm_cli/getting-started-with-helm-on-openshift-container-platform.md) and [Kubernetes](https://helm.sh/) container platforms.
 
 ## Helm Chart contents
 
@@ -79,7 +79,7 @@ This topic provides details covering the PersistentVolumes \(PVs\) and related o
 -   **[Configuring DX 9.5 deployments to container platforms using Helm](../containerization/configure_deployment_helm.md)**  
 This topic covers details the configuration structure in the HCL Digital Experience 9.5 OpenShift and Kubernetes deployment with Helm.
 -   **[Scaling DX 9.5 container deployments using Helm](../containerization/container_scaling_helm.md)**  
-This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.html) for more information on these services.
+This topic provides information to apply container scaling capabilities, and how scaling resources are handled within the HCL DX 9.5 deployment using Helm. Refer to `HorizontalPodAutoscaler` details in [Kubernetes](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) and [Red Hat OpenShift documentation](https://docs.openshift.com/container-platform/4.7/nodes/pods/nodes-pods-autoscaling.md) for more information on these services.
 -   **[Digital Asset Management persistence architecture](../containerization/dam_persistence_architecture.md)**  
 This topic describes the components of the Digital Asset Management persistence. The updated DAM persistence feature is available from HCL Digital Experience 9.5 Container Update CF198 and later.
 

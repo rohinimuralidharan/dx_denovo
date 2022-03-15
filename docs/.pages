@@ -4,5 +4,5 @@ nav:
     - whatsnew
     - containerization
     - DX Traditional: dxtraditional
-    - Working with DX: corecapabilities
-    - Latest features: allnewfeatures
+    - Designing with DX: allnewfeatures
+    # - Latest features: allnewfeatures

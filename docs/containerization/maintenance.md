@@ -3,7 +3,7 @@
 The information in this section enables administrators to manage select operations performance controls, and to update and replace their HCL Digital Experience 9.5 container images with the latest 9.5 container update release.
 
 -   New HCL Digital Experience 9.5 CFxxx container images are released on a regular cadence.
--   Images include fixes to HCL Digital Experience \(comprised of HCL Portal and HCL Web Content Manager\), IBM WebSphere Application Server \(WAS\) Network Deployment, and the Java Development Kit \(JDK\), and additional components, such as the Experience API, Digital Asset Management, Content Composer, Remote Search, and more. Consult the Digital Experience [Deployment](../containerization/deployment.html) topic for the latest list of DX 9.5 Container Images delivered through the Container Update releases.
+-   Images include fixes to HCL Digital Experience \(comprised of HCL Portal and HCL Web Content Manager\), IBM WebSphere Application Server \(WAS\) Network Deployment, and the Java Development Kit \(JDK\), and additional components, such as the Experience API, Digital Asset Management, Content Composer, Remote Search, and more. Consult the Digital Experience [Deployment](../containerization/deployment.md) topic for the latest list of DX 9.5 Container Images delivered through the Container Update releases.
     -   Customers should not apply maintenance to an HCL Digital Experience 9.5 container image. Instead, they should run the update process as described below.
     -   Customers should not extend the HCL Digital Experience 9.5 container images. They are not intended to be used in the FROM instruction as a parent image.
 -   Critical hot fixes are built for HCL Digital Experience 9.5 container releases when required outside of the container release process. HCL Digital Experience customers can contact HCL Customer Support if a critical fix is required for their HCL Digital Experience containerized deployment.
@@ -15,7 +15,7 @@ The information in this section enables administrators to manage select operatio
 
     -   Starting with 9.5, under the HCL Digital Experience container update releases, as new HCL Digital Experience 9.5 images become available from HCL, customers can modify the custom resource instance to use 9.5. The initial HCL Digital Experience 9.5 container update release available to DX customers in the HCL Software License Portal page.
     -   This pattern is possible because customizations are not made to the image but isolated to the persistent volume and external database, which follows best practices.
-    -   The procedure for updating to a new release of the HCL Digital Experience 9.5 image is detailed in the [Update the Digital Experience 9.5 Core Kubernetes Container Deployment](../containerization/update_dx_core_kubernetes_container_deployment.html).
+    -   The procedure for updating to a new release of the HCL Digital Experience 9.5 image is detailed in the [Update the Digital Experience 9.5 Core Kubernetes Container Deployment](../containerization/update_dx_core_kubernetes_container_deployment.md).
 
 -   **[Update the Digital Experience 9.5 Core Kubernetes or Red Hat OpenShift container deployment](../containerization/update_dx_core_kubernetes_container_deployment.md)**  
 Update the Digital Experience 9.5 Core Kubernetes container deployment.

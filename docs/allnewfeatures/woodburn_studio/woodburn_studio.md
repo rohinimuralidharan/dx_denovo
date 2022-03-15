@@ -26,5 +26,5 @@ However, one can immediately force the indexer to run manually from the **Search
 4.  To start the crawler for the WCM Content Source, click the **Play** icon.
 5.  To start the crawler for the Portal Content Source, click the **Play** icon.
 
-Go to [Configuring a crawler to search your local portal site](../admin-system/srccrwlindxsite.html) for more information about configuring and running a search crawler on your local portal site.
+Go to [Configuring a crawler to search your local portal site](../../admin-system/srccrwlindxsite.md) for more information about configuring and running a search crawler on your local portal site.
 

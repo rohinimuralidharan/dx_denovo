@@ -2,13 +2,13 @@
 
 Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF19 and CF191 release containers along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine).
 
-**Note:** Refer to the latest HCL DX 9.5 Container Release CF19 and CF191 and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Refer to the latest HCL DX 9.5 Container Release CF19 and CF191 and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 ## About this task
 
 Follow these steps to deploy HCL Digital Experience 9.5 CF19 and higher container release along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine). This deployment relies heavily on Kubernetes Operators for full functionality.
 
-**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Reference the latest HCL DX 9.5 Container Release and Update file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 ## Prerequisites
 
@@ -284,7 +284,7 @@ kubectl create -f hcl-dx-cloud-scripts/deploy/crds/git_v1_dxdeployment_crd.yaml
 
 See the following section for additional information:
 
--   [Install Experience API, Content Composer, and Digital Asset Management](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.html)
+-   [Install Experience API, Content Composer, and Digital Asset Management](https://help.hcltechsw.com/digital-experience/9.5/containerization/install_config_cc_dam.md)
 
 ## Update the HCL Digital Experience 9.5 GKE deployment
 

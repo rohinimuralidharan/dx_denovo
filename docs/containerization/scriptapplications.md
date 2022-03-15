@@ -8,7 +8,7 @@ The `deploy-scriptapplication` command is used with the DXClient tool to push or
 
 **Required Files**:
 
-The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same \(identified by the `prebuiltZip` or `contentRoot` attributes respectively\). For more information on Script Applications, refer to the [Script Application](../script-portlet/build_apps.html) topics in the HCL DX Help Center.
+The script application push command in the DXClient tool requires a Script Application zip file or an extracted folder of the same \(identified by the `prebuiltZip` or `contentRoot` attributes respectively\). For more information on Script Applications, refer to the [Script Application](../script-portlet/build_apps.md) topics in the HCL DX Help Center.
 
 **Command**
 

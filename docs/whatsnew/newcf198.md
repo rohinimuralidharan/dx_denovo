@@ -30,7 +30,7 @@ See the [DXClient and DXConnect tooling supporting CICD release processes](../co
 
 Beginning with HCL Digital Experience CF198, a Custom Layout Editor is available for use with HCL DX Site Manager capabilities, reducing custom development requirements for site designers implementing custom layouts in DX site pages.
 
-See the [Using the Digital Experience Custom Layout Editor](../../8.5/panel_help/custom_layout_editor.html) topic for more information.
+See the [Using the Digital Experience Custom Layout Editor](../panel_help/custom_layout_editor.md) topic for more information.
 
 ## New Experience APIs
 

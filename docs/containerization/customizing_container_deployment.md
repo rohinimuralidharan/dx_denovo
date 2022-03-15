@@ -21,7 +21,7 @@ Customizing the deployment requires updating the deploy/crds/git.cwp.pnp-hcl.com
 
 ![](../images/container_deployment_file_location.png "Deploy scripts")
 
-Reference the HCL Digital Experience [Deployment topic](deployment.html) for the list of supported platforms and latest HCL DX 9.5 container package list files that can be downloaded from your HCL Digital Experience entitlements on the HCL Software License Portal.
+Reference the HCL Digital Experience [Deployment topic](deployment.md) for the list of supported platforms and latest HCL DX 9.5 container package list files that can be downloaded from your HCL Digital Experience entitlements on the HCL Software License Portal.
 
 Once modified, the `deployDx.sh` or the `updateDx.sh` scripts should be run to perform \(or update\) the target deployment.
 

@@ -6,7 +6,7 @@ Learn how to deploy HCL Digital Experience \(DX\) 9.5 CF192 and later release co
 
 Follow these steps to deploy HCL Digital Experience 9.5 Container Update CF192 and later release along with Ambassador to Kubernetes, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine). This deployment relies heavily on Kubernetes Operators for full functionality.
 
-**Note:** Refer to the latest HCL DX 9.5 Container Update Release CF192 and later file listings in the [Docker deployment](../containerization/docker.html) topic.
+**Note:** Refer to the latest HCL DX 9.5 Container Update Release CF192 and later file listings in the [Docker deployment](../containerization/docker.md) topic.
 
 ## Prerequisites
 

@@ -114,7 +114,7 @@ The following describes the requirements to deploy the HCL Digital Experience 9.
 
         With DX 9.5 Container Update CF171 and higher, WebSphere Application Server 9.0.5.2 is included and that IBM fix pack removed the IBM JSF portlet bridge. If you are using JSF portlets and leverage the JSF portlet bridge, proceed to the HCL DX 9.5 Container Update CF18 for the required JavaServer Faces Bridge support before moving to a container-based deployment.
 
-        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../overview/new_cf18.html).
+        The HCL JavaServer Faces Bridge is added to HCL Digital Experience offerings with Container Update CF18 and CF18 on-premises platform CF update. For more information please see [What's New in Container Update CF18](../overview/new_cf18.md).
 
         **Note:** For information about the limitations related to JSF 2.2 support, see [Limitations when running HCL DX Portlet Bridge on WebSphere Application Server 9.0](../dev-portlet/dx_bridge_for_jsf_onwas9x.md#section_ig1_5hx_3qb).
 

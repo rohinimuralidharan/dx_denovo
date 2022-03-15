@@ -12,7 +12,7 @@ This section provides administrators with all Helm-based deployment tasks to dep
 
 Follow these steps to prepare for and deploy HCL Digital Experience 9.5 CF196 and later release to Kubernetes using Helm, as verified in [Google Kubernetes Engine \(GKE\)](https://console.cloud.google.com/marketplace/details/google-cloud-platform/container-engine), and with HCL Digital Experience CF197 and later releases, the Helm deployment pattern is supported for new deployments to [Red Hat Open Shift](https://www.redhat.com/en/technologies/cloud-computing/openshift), [Amazon Elastic Kubernetes Service \(EKS\)](https://aws.amazon.com/eks/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc&eks-blogs.sort-by=item.additionalFields.createdDate&eks-blogs.sort-order=desc), and [Microsoft Azure Kubernetes Service \(AKS\)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
 
-**Before you begin:** Refer to the latest HCL DX 9.5 Container Update image files list given in the [Docker image list](../containerization/docker.html) topic.
+**Before you begin:** Refer to the latest HCL DX 9.5 Container Update image files list given in the [Docker image list](../containerization/docker.md) topic.
 
 -   **[Planning your container deployment using Helm](../containerization/helm_planning_deployment.md)**  
 Helm is a software package manager that simplifies deployment of applications and services to Red Hat OpenShift and Kubernetes container platforms.
