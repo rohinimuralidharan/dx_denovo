@@ -1962,13 +1962,13 @@
         dx-deployment-core-0 system-err-log
 </code></pre>
 <p>This retrieves the log for a single sidecar container, which corresponds to a single Core log file.</p>
-<p><strong>Note:</strong> The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see <a href="../helm_additional_tasks/#configure_core_sidecar_logging">Configure Core sidecar logging</a>.</p>
+<p><strong>Note:</strong> The additional logging enabled for Core goes to trace.log. To configure trace.log for sidecar logging, see <a href="helm_additional_tasks.md#configure_core_sidecar_logging">Configure Core sidecar logging</a>.</p>
 <p>By default, two sidecar containers are launched with Core:</p>
 <ul>
 <li><code>system-out-log</code> - Exposes the <code>WebSphere_Portal/SystemOut.log</code> file.</li>
 <li><code>system-err-log</code> - Exposes the <code>WebSphere_Portal/SystemErr.log</code> file.</li>
 </ul>
-<p>For information on configuring additional Core sidecar log containers, please see <a href="../helm_additional_tasks/#configure_core_sidecar_logging">Configure Core sidecar logging</a>.</p>
+<p>For information on configuring additional Core sidecar log containers, please see <a href="helm_additional_tasks.md#configure_core_sidecar_logging">Configure Core sidecar logging</a>.</p>
 <h2 id="accessing-remote-search-logs">Accessing Remote Search logs</h2>
 <p>To access a Remote Search application log, use the command:</p>
 <pre><code>kubectl logs -n &lt;namespace&gt;
@@ -1979,13 +1979,13 @@
       dx-deployment-remote-search-0 system-err-log
 </code></pre>
 <p>This retrieves the log for a single sidecar container, which corresponds to a single Remote Search log file.</p>
-<p><strong>Note:</strong> The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see <a href="../helm_additional_tasks/#configure_rs_sidecar_logging">Configure Remote Search sidecar logging</a>.</p>
+<p><strong>Note:</strong> The additional logging enabled for Remote Search goes to trace.log. To configure trace.log for sidecar logging, see <a href="helm_additional_tasks.md#configure_rs_sidecar_logging">Configure Remote Search sidecar logging</a>.</p>
 <p>By default, two sidecar containers are launched with Remote Search:</p>
 <ul>
 <li><code>system-out-log</code> - Exposes the <code>WebSphere_Portal/SystemOut.log</code> file.</li>
 <li><code>system-err-log</code> - Exposes the <code>WebSphere_Portal/SystemErr.log</code> file.</li>
 </ul>
-<p>For information on configuring additional Remote Search sidecar log containers, please see <a href="../helm_additional_tasks/#configure_rs_sidecar_logging">Configure Remote Search sidecar logging</a>.</p>
+<p>For information on configuring additional Remote Search sidecar log containers, please see <a href="helm_additional_tasks.md#configure_rs_sidecar_logging">Configure Remote Search sidecar logging</a>.</p>
 <h2 id="accessing-logs-for-other-applications">Accessing logs for other applications</h2>
 <p>Applications other than Core and Remote Search do not have logging sidecar containers and only provide a single log per pod, which can typically be obtained using the command: <code>kubectl logs -n &lt;namespace&gt; &lt;pod-name&gt;</code> (omitting a container name), for example:</p>
 <pre><code>kubectl logs -n dxns
@@ -2109,7 +2109,7 @@
 <p>The amount of logs that are stored per container in running the Pods depends on the configuration of your Kubernetes Cluster. Refer to the documentation of your cloud provider for further information.</p>
 <p>Note that for all applications that do not write their logs separately to a file, the only source of historical log data is the Kubernetes logging.</p>
 <p>We encourage the customers to process the logging of their Kubernetes Cluster in a separate logging solution of their choice.</p>
-<p><strong>Parent topic:</strong><a href="../helm_troubleshooting/">Troubleshooting your Helm deployment</a></p>
+<p><strong>Parent topic:</strong><a href="../containerization/helm_troubleshooting.md">Troubleshooting your Helm deployment</a></p>
 
               
             </article>

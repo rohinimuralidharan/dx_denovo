@@ -38,19 +38,16 @@ You need to have `tar` and HCL DX Helm Chart downloaded. Your `kubectl` configur
 1.  Locate the `hcl-dx-deployment-*.tgz` in your downloaded package.
 2.  Execute the following commands to update the CRDs:
 
-    ```
-    # Extract CRD directory from downloaded Helm Chart
-    tar vxf hcl-dx-deployment-*.tgz hcl-dx-deployment/crds
-    # Apply extracted CRDs on cluster level
-    kubectl apply -f hcl-dx-deployment/crds
-    ```
-
-
+        # Extract CRD directory from downloaded Helm Chart
+        tar vxf hcl-dx-deployment-*.tgz hcl-dx-deployment/crds
+        # Apply extracted CRDs on cluster level
+        kubectl apply -f hcl-dx-deployment/crds
+    
 After the action is completed, you can proceed with the DX update procedure. This step is required to be executed only once.
 
 1.  **Populate your repository with the new images**
 
-    Download the new HCL DX 9.5 container update images you need to upgrade and ensure that they are available in the image repository specified in your custom-values.yaml file. See the [Docker image list](https://help.hcltechsw.com/digital-experience/9.5/containerization/docker.md) for the latest HCL DX 9.5 container update images available.
+    Download the new HCL DX 9.5 container update images you need to upgrade and ensure that they are available in the image repository specified in your custom-values.yaml file. See the [Docker image list](../containerization/docker/docker.md) for the latest HCL DX 9.5 container update images available.
 
 2.  **Download the Helm charts for the version to be installed**
 
@@ -60,12 +57,11 @@ After the action is completed, you can proceed with the DX update procedure. Thi
 
     If you have CF199 deployed, ensure that you remove the `operatorToHelm` configuration from the custom-values.yaml file before upgrading to CF200, irrespective of whether the property is enabled or not.
 
-    ```
-    migration:
-      operatorToHelm:
-        enabled: true
-    ```
 
+        migration:
+          operatorToHelm: 
+            enabled: true 
+    
     **Note:** The `operatorToHelm` configuration property is not supported in CF200, hence it must be removed. This property was introduced in CF199 to facilitate migration from the previous Operator-based deployments to Helm-based deployments.
 
 4.  **Update the image tags**
@@ -76,11 +72,8 @@ After the action is completed, you can proceed with the DX update procedure. Thi
 
     After making the changes to the custom-values.yaml file, use the following command to upgrade your HCL DX 9.5 deployment to CF197 and later release version:
 
-    ```
-    # Helm upgrade command
-    helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
-                        
-    ```
+        # Helm upgrade command:
+        helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
 
     In this example:
 
@@ -88,12 +81,12 @@ After the action is completed, you can proceed with the DX update procedure. Thi
     -   The `-f path/to/your/custom-values.yaml` parameter must point to the custom-values.yaml you updated.
     -   `path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz` is the HCL Digital Experience 9.5 Container Update Helm Chart that you extracted in the preparation steps.
 
--   **[Running DX Core configuration tasks](../containerization/run_core_config_engine.md)**  
+<!-- -   **[Running DX Core configuration tasks](../containerization/run_core_config_engine.md)**  
 This topic shows how to run manual Core configuration tasks on your HCL DX 9.5 CF197 and later container deployments.
 -   **[Migrate to new DAM DB in Helm-based deployments](../containerization/helm_dam_migration_newDB.md)**  
 This manual migration process to the new DAM DB is mandatory if you have DX CF196 or CF197 deployed using the Helm-based deployment option and are now upgrading to CF200. It is mandatory because you cannot upgrade to a future release, such as CF201, without manually migrating to the new DB. If you already have CF 198 or CF199 installed using the Helm-based deployment option, then you need not manually migrate the DAM DB.
 -   **[Restore Digital Asset Management image to previous version](../digital_asset_mgmt/dam_restore_image_helm.md)**  
-This section shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version.
+This section shows you how to restore the HCL Digital Experience 9.5 Digital Asset Management image to a previous version. -->
 
 **Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
 

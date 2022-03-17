@@ -112,7 +112,7 @@ dx-ambassador-redis-6cbbf58649-qtgqp   1/1     Running   0          2m12s   10.2
 
 ## Select DX applications to deploy
 
-HCL Digital Experience 9.5 consists of multiple applications and services that can be deployed. Depending on your needs, it might not be necessary to have all applications deployed. Refer to the [Applications overview - Deploy DX 9.5 to container platforms using Helm](https://doc.cnx.cwp.pnp-hcl.com/digital-experience/9.5/containerization/applications_overview_deploy_helm.md) Help Center topic for related information.
+HCL Digital Experience 9.5 consists of multiple applications and services that can be deployed. Depending on your needs, it might not be necessary to have all applications deployed. Refer to the [Applications overview - Deploy DX 9.5 to container platforms using Helm](https://doc.cnx.cwp.pnp-hcl.com/digital-experience/9.5/containerization/applications_overview_deploy_helm.html) Help Center topic for related information.
 
 **Disabling or enabling specific applications**
 
@@ -150,7 +150,7 @@ applications:
 
 ```
 
-You can set applications that you do not want to be deployed to `false`. As noted in the [Applications overview - Deploy DX 9.5 to container platforms using Helm](https://doc.cnx.cwp.pnp-hcl.com/digital-experience/9.5/containerization/applications_overview_deploy_helm.md) Help Center topic, some DX applications are pre-requisites for others to be deployed. It can appear that you have disabled an application, but it still gets deployed. This is due to other applications requiring that one.
+You can set applications that you do not want to be deployed to `false`. As noted in the [Applications overview - Deploy DX 9.5 to container platforms using Helm](https://doc.cnx.cwp.pnp-hcl.com/digital-experience/9.5/containerization/applications_overview_deploy_helm.html) Help Center topic, some DX applications are pre-requisites for others to be deployed. It can appear that you have disabled an application, but it still gets deployed. This is due to other applications requiring that one.
 
 ## Supported LDAP configuration
 
@@ -353,7 +353,7 @@ configuration:
 
 The HCL Digital Experience 9.5 Kubernetes deployment using Helm allows you to configure the pod count of each individual application.
 
-In addition, it is possible to configure the use of HorizontalPodAutoscalers that scales up and down the applications by adding or removing Pods based on the pod metrics. Refer to the [Scaling DX 9.5 container deployments using Helm](https://doc.cnx.cwp.pnp-hcl.com/digital-experience/9.5/containerization/container_scaling_helm.md) Help Center topic for detailed overview information.
+In addition, it is possible to configure the use of HorizontalPodAutoscalers that scales up and down the applications by adding or removing Pods based on the pod metrics. Refer to the [Scaling DX 9.5 container deployments using Helm](https://doc.cnx.cwp.pnp-hcl.com/digital-experience/9.5/containerization/container_scaling_helm.html) Help Center topic for detailed overview information.
 
 **Note:** You are not able to use more than one \(1\) Core Pod until you have performed a database transfer.
 
@@ -722,6 +722,4 @@ images:
 ```
 
 All pods created now have that secret configured for pulling DX container images.
-
-**Parent topic:**[Deploying container platforms using Helm](../containerization/helm_deployment.md)
 

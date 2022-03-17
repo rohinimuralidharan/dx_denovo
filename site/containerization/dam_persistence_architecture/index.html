@@ -1808,9 +1808,9 @@
 <p><img alt="Digital Asset Management persistence component architecture" src="../../images/dam_persistence_components.png" title="DAM persistence components" /></p>
 <p><img alt="Digital Asset Management persistence cluster architecture" src="../../images/dam_persistence_cluster_architecture.png" title="DAM persistence cluster architecture" /></p>
 <h2 id="persistence-node"><code>persistence-node</code></h2>
-<p><code>persistence-node</code> provides the database functionality for <a href="../../digital_asset_mgmt/digital_asset_mgmt_overview/">HCL Digital Asset Management</a>. The <code>persistence-node</code> is a DX <a href="https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image">Red Hat Universal Base Image (UBI)</a> container image installed with PostgreSQL and the Replication Manager Service. <code>[repmgr](https://repmgr.org/)</code> is an open-source tool suite for managing replication and failover in a cluster of PostgreSQL servers. <code>repmgr</code> enhances the built-in hot-standby capabilities of PostgreSQL with tools to set up standby servers, monitor replication, and perform administrative tasks, such as failover or manual switchover operations.</p>
+<p><code>persistence-node</code> provides the database functionality for <a href="../digital_asset_mgmt/digital_asset_mgmt_overview.md">HCL Digital Asset Management</a>. The <code>persistence-node</code> is a DX <a href="https://www.redhat.com/en/blog/introducing-red-hat-universal-base-image">Red Hat Universal Base Image (UBI)</a> container image installed with PostgreSQL and the Replication Manager Service. <code>[repmgr](https://repmgr.org/)</code> is an open-source tool suite for managing replication and failover in a cluster of PostgreSQL servers. <code>repmgr</code> enhances the built-in hot-standby capabilities of PostgreSQL with tools to set up standby servers, monitor replication, and perform administrative tasks, such as failover or manual switchover operations.</p>
 <p>In case of PostgreSQL master server failure, the <code>repmgr</code> service switches the server role from master to standby.</p>
-<p>The <code>persistence-node</code> configurations are available in the Helm Chart <a href="../helm_planning_deployment/">values.yaml</a> file as <code>persistenceNode</code>.</p>
+<p>The <code>persistence-node</code> configurations are available in the Helm Chart <a href="helm_planning_deployment.md">values.yaml</a> file as <code>persistenceNode</code>.</p>
 <p>The administrator can configure number of <code>persistence-node</code> under <code>scaling</code> configuration.</p>
 <pre><code># Scaling settings for deployed applications
 scaling:
@@ -1840,13 +1840,13 @@ scaling:
       volumeName:
 </code></pre>
 <h2 id="persistence-connection-pool"><code>persistence-connection-pool</code></h2>
-<p>The <code>persistence-connection-pool</code> container runs the <a href="https://www.pgpool.net/mediawiki/index.php/Main_Page">Pg-pool</a> service. Pg-pool is a middleware that works between <code>persistence-node</code> and <a href="../../digital_asset_mgmt/digital_asset_mgmt_overview/">HCL Digital Asset Management</a>.</p>
+<p>The <code>persistence-connection-pool</code> container runs the <a href="https://www.pgpool.net/mediawiki/index.php/Main_Page">Pg-pool</a> service. Pg-pool is a middleware that works between <code>persistence-node</code> and <a href="../digital_asset_mgmt/digital_asset_mgmt_overview.md">HCL Digital Asset Management</a>.</p>
 <p>The service provides:</p>
 <ul>
 <li>Connection pooling</li>
 <li>Load balancing</li>
 </ul>
-<p>For better performance, administrator can scale the <code>persistence-connection-pool</code> to more than one pod. The <code>persistence-connection-pool</code> configurations are available in Helm Chart <a href="../helm_planning_deployment/">values.yaml</a> file as <code>persistenceConnectionPool</code>.</p>
+<p>For better performance, administrator can scale the <code>persistence-connection-pool</code> to more than one pod. The <code>persistence-connection-pool</code> configurations are available in Helm Chart <a href="helm_planning_deployment.md">values.yaml</a> file as <code>persistenceConnectionPool</code>.</p>
 <pre><code># Scaling settings for deployed applications
 scaling:
   # The default amount of replicas per application
@@ -1865,7 +1865,7 @@ scaling:
 <p>The following is an example of a persistence cluster in a successful deployment.</p>
 <p><img alt="" src="../../images/cluster_status_example.png" title="Persistence cluster in a successful deployment" /></p>
 <p>.</p>
-<p><strong>Parent topic:</strong><a href="../helm_overview/">Overview of the Helm architecture</a></p>
+<p><strong>Parent topic:</strong><a href="../containerization/helm_overview.md">Overview of the Helm architecture</a></p>
 
               
             </article>

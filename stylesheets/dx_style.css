@@ -1,8 +1,8 @@
 <!-- Custom HTML site displayed as the Home chapter -->
-
-{% extends "main.html" %}
+ 
+/* {% extends "main.html" %} */
     {% block tabs %}
-{{ super() }}
+{{ super() }} 
 <style>
 
     .md-main {
@@ -21,7 +21,7 @@
 	.md-tabs__link--active {
 		border-bottom: 2px solid #FFF;
 	}
-	
+
     .tx-container {
         padding-top: .0rem;
         background: linear-gradient(to bottom, var(--md-primary-fg-color), hsla(290deg,4%,43%,1) 99%,#fff 99%)

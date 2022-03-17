@@ -1782,17 +1782,17 @@
 
 <h1 id="update-helm-deployment-configuration">Update Helm deployment configuration</h1>
 <p>This section describes how to update the configuration of an HCL Digital Experience 9.5 CF196 or later deployment to Kubernetes or OpenShift installed using Helm.</p>
-<p>This section assumes that you prepared your cluster and your custom-values.yaml file, using guidance provided in the <a href="../helm_planning_deployment/">Planning your HCL DX 9.5 container deployment using Helm</a> topic, and then installed your deployment using the instructions in the <a href="../helm_install_commands/">Install</a> topic.</p>
+<p>This section assumes that you prepared your cluster and your custom-values.yaml file, using guidance provided in the <a href="helm_planning_deployment.md">Planning your HCL DX 9.5 container deployment using Helm</a> topic, and then installed your deployment using the instructions in the <a href="helm_install_commands.md">Install</a> topic.</p>
 <ul>
 <li>
 <p><strong>Overview of Helm Configuration Updates</strong></p>
-<p>Once an HCL Digital Experience Kubernetes 9.5 deployment is installed, it is possible to update its configuration directly using the standard Kubernetes or OpenShift commands (for example, by updating values in the various config maps). However, this is NOT the recommended approach. Some of the configuration parameters have interdependencies, as outlined in the <a href="../helm_planning_deployment/">Planning section</a>. These require knowledgeable management to make changes that are compatible with interdependency requirements. For example, if you change the context root for DX Core you also need to change the readiness and liveness probes.</p>
+<p>Once an HCL Digital Experience Kubernetes 9.5 deployment is installed, it is possible to update its configuration directly using the standard Kubernetes or OpenShift commands (for example, by updating values in the various config maps). However, this is NOT the recommended approach. Some of the configuration parameters have interdependencies, as outlined in the <a href="helm_planning_deployment.md">Planning section</a>. These require knowledgeable management to make changes that are compatible with interdependency requirements. For example, if you change the context root for DX Core you also need to change the readiness and liveness probes.</p>
 <p>The recommended approach for configuration changes is to update the custom-values.yaml file used to install the deployment, and then run a Helm upgrade. This has the added benefit that your custom-values.yaml file remains an up-to-date description of the configuration of your environment.</p>
 </li>
 <li>
 <p><strong>Helm Upgrade configuration command</strong></p>
 <p>After making the needed changes to your custom-values.yaml file, use the following command:</p>
-<p>```</p>
+<p>```py</p>
 <h1 id="helm-upgrade-command">Helm upgrade command</h1>
 <p>helm upgrade -n your-namespace -f path/to/your/custom-values.yaml your-release-name path/to/hcl-dx-deployment-vX.X.X_XXXXXXXX-XXXX.tar.gz
 ```</p>
@@ -1803,7 +1803,7 @@
 </ul>
 </li>
 </ul>
-<p><strong>Parent topic:</strong><a href="../helm_operations/">Operations using Helm</a></p>
+<p><strong>Parent topic:</strong><a href="../containerization/helm_operations.md">Operations using Helm</a></p>
 
               
             </article>

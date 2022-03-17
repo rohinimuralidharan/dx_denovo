@@ -82,5 +82,3 @@ This topic describes how you can access the ConfigWizard admin console in a cont
 
 5.  Navigate to the following URL to open the ConfigWizard admin console: https://localhost:10203/ibm/console
 
-**Parent topic:**[Operations using Helm](../containerization/helm_operations.md)
-

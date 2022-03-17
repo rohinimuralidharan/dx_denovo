@@ -1833,7 +1833,7 @@
 <h1 id="monitor-the-digital-experience-deployment-using-metrics">Monitor the Digital Experience deployment using metrics</h1>
 <p>This topic outlines the use of standards-based metrics to monitor activity and performance of DX container deployments.</p>
 <h2 id="prometheus-metrics-and-grafana">Prometheus metrics and Grafana</h2>
-<p>The <a href="../helm_deployment/">Digital Experience 9.5 Helm deployment</a> supports monitoring the deployment activity with advanced metrics and visualization, by exposing standards-based <a href="https://prometheus.io/">Prometheus</a>-compatible metrics. <a href="https://prometheus.io/">Prometheus metrics</a> components can <code>scrape</code> the metrics of most of the DX 9.5 container applications. The collected data is queried from Prometheus and are visualized in operations dashboard solutions, such as <a href="https://grafana.com/">Grafana</a>. The following information can advise administrators which <a href="../deploy_applications_using_helm/">Digital Experience 9.5 applications</a> can use these tools with some usage examples.</p>
+<p>The <a href="helm_deployment.md">Digital Experience 9.5 Helm deployment</a> supports monitoring the deployment activity with advanced metrics and visualization, by exposing standards-based <a href="https://prometheus.io/">Prometheus</a>-compatible metrics. <a href="https://prometheus.io/">Prometheus metrics</a> components can <code>scrape</code> the metrics of most of the DX 9.5 container applications. The collected data is queried from Prometheus and are visualized in operations dashboard solutions, such as <a href="https://grafana.com/">Grafana</a>. The following information can advise administrators which <a href="../deploy_applications_using_helm/">Digital Experience 9.5 applications</a> can use these tools with some usage examples.</p>
 <h2 id="digital-experience-95-applications-and-prometheus-metrics">Digital Experience 9.5 applications and Prometheus metrics</h2>
 <p>The following <a href="../deploy_applications_using_helm/">Digital Experience 9.5 applications</a> expose metrics that can be tracked with Prometheus metrics.</p>
 <ul>
@@ -1903,7 +1903,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Important:</strong> HCL Digital Experience 9.5 does not include a deployment of <a href="https://prometheus.io/">Prometheus</a> or <a href="https://grafana.com/">Grafana</a>. When metrics are enabled in the <a href="../helm_planning_deployment/">DX 9.5 Helm chart</a>, the application exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation.</p>
+<p><strong>Important:</strong> HCL Digital Experience 9.5 does not include a deployment of <a href="https://prometheus.io/">Prometheus</a> or <a href="https://grafana.com/">Grafana</a>. When metrics are enabled in the <a href="helm_planning_deployment.md">DX 9.5 Helm chart</a>, the application exposes Prometheus-compatible metrics. Those metrics can be consumed by any common Prometheus installation.</p>
 <p>HCL DX 9.5 metrics are compatible with the following deployment and discovery types of Prometheus in <a href="https://kubernetes.io/">Kubernetes</a> environments:</p>
 <ul>
 <li><a href="https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus">Prometheus</a> - Discovers metrics by evaluating the <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/"><code>annotation</code></a> of the services</li>
@@ -1911,7 +1911,7 @@
 </ul>
 <p>Administrators can configure the HCL DX 9.5 metrics depending on their specific Prometheus deployment, as outlined in the following sections.</p>
 <h2 id="configure-prometheus-metrics">Configure Prometheus metrics</h2>
-<p>To configure the metrics for the <a href="../deploy_applications_using_helm/">Digital Experience 9.5 applications</a> in the DX 9.5 Helm chart, enable scraping in the <a href="../helm_planning_deployment/"><code>custom-values.yaml</code></a> used for the DX 9.5 deployment. The metrics are configured independently for each DX 9.5 application.</p>
+<p>To configure the metrics for the <a href="../deploy_applications_using_helm/">Digital Experience 9.5 applications</a> in the DX 9.5 Helm chart, enable scraping in the <a href="helm_planning_deployment.md"><code>custom-values.yaml</code></a> used for the DX 9.5 deployment. The metrics are configured independently for each DX 9.5 application.</p>
 <table>
 <thead>
 <tr>
