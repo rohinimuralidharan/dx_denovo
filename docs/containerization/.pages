@@ -2,6 +2,7 @@ title: DX Cloud Native
 nav:
     - deployment.md
     - overview.md
+    - docker.md
     - c_kubesupportstatement.md
     - docker
     - helm
